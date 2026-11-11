@@ -1,0 +1,70 @@
+[
+  {
+    "id": "evt-half-start-1",
+    "type": {"id": 18, "name": "Half Start"},
+    "team": {"id": 788, "name": "Morocco"}
+  },
+  {
+    "id": "evt-pass-complete-1",
+    "type": {"id": 30, "name": "Pass"},
+    "player": {"id": 6301, "name": "Youssef En-Nesyri"},
+    "team": {"id": 788, "name": "Morocco"},
+    "pass": {
+      "recipient": {"id": 5234, "name": "Sofyan Amrabat"},
+      "length": 12.5,
+      "height": {"id": 1, "name": "Ground Pass"},
+      "end_location": [48.5, 41.3]
+    }
+  },
+  {
+    "id": "evt-pass-incomplete-1",
+    "type": {"id": 30, "name": "Pass"},
+    "player": {"id": 6301, "name": "Youssef En-Nesyri"},
+    "team": {"id": 788, "name": "Morocco"},
+    "pass": {
+      "recipient": {"id": 5237, "name": "Hakim Ziyech"},
+      "length": 22.1,
+      "height": {"id": 3, "name": "High Pass"},
+      "end_location": [60.0, 10.0],
+      "outcome": {"id": 9, "name": "Incomplete"}
+    }
+  },
+  {
+    "id": "evt-shot-1",
+    "type": {"id": 16, "name": "Shot"},
+    "player": {"id": 6301, "name": "Youssef En-Nesyri"},
+    "team": {"id": 788, "name": "Morocco"}
+  },
+  {
+    "id": "evt-duel-aerial-won-1",
+    "type": {"id": 4, "name": "Duel"},
+    "player": {"id": 6301, "name": "Youssef En-Nesyri"},
+    "team": {"id": 788, "name": "Morocco"},
+    "duel": {"type": {"id": 11, "name": "Aerial Won"}}
+  },
+  {
+    "id": "evt-duel-aerial-lost-1",
+    "type": {"id": 4, "name": "Duel"},
+    "player": {"id": 6301, "name": "Youssef En-Nesyri"},
+    "team": {"id": 788, "name": "Morocco"},
+    "duel": {"type": {"id": 10, "name": "Aerial Lost"}}
+  },
+  {
+    "id": "evt-interception-1",
+    "type": {"id": 10, "name": "Interception"},
+    "player": {"id": 6301, "name": "Youssef En-Nesyri"},
+    "team": {"id": 788, "name": "Morocco"}
+  },
+  {
+    "id": "evt-carry-1",
+    "type": {"id": 43, "name": "Carry"},
+    "player": {"id": 3625, "name": "Sofiane Boufal"},
+    "team": {"id": 788, "name": "Morocco"}
+  },
+  {
+    "id": "evt-ball-recovery-1",
+    "type": {"id": 2, "name": "Ball Recovery"},
+    "player": {"id": 3625, "name": "Sofiane Boufal"},
+    "team": {"id": 788, "name": "Morocco"}
+  }
+]

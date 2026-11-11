@@ -67,10 +67,32 @@ def test_parse_events_counts_known_player_correctly() -> None:
 def test_parse_events_ignores_unknown_event_types() -> None:
     events_json = _load_fixture("events_3857276.json")
 
-    # The fixture includes a team-level "Half Start" event with no
-    # "player" key at all, proving the parser skips it without raising.
+    # The fixture includes two kinds of "unrecognized" event:
+    # - "Half Start": team-level, no "player" key at all.
+    # - "Ball Receipt*": has a real "player" (6301) but its type name is
+    #   not in the known-counter mapping.
+    # Both must be skipped without raising and without affecting any
+    # player's counted stats.
     stats = parse_events(events_json)
 
-    # Exactly the two players with real events show up; the player-less
-    # "Half Start" event produced no entry and did not crash the parser.
+    # Exactly the two players with real counted events show up; neither
+    # unrecognized event produced a spurious entry or crashed the parser.
     assert set(stats.keys()) == {6301, 3625}
+
+    # The "Ball Receipt*" event for player 6301 must not have bumped any
+    # of his counters - these totals are identical to
+    # test_parse_events_counts_known_player_correctly, which would fail
+    # if "Ball Receipt*" were mistakenly counted as something.
+    en_nesyri_stats = stats[6301]
+    assert en_nesyri_stats.passes_attempted == 2
+    assert en_nesyri_stats.passes_completed == 1
+    assert en_nesyri_stats.shots == 1
+    assert en_nesyri_stats.duels == 2
+    assert en_nesyri_stats.aerial_duels == 2
+    assert en_nesyri_stats.interceptions == 1
+    assert en_nesyri_stats.carries == 0
+    assert en_nesyri_stats.pressures == 0
+    assert en_nesyri_stats.ball_recoveries == 0
+    assert en_nesyri_stats.dribbles == 0
+    assert en_nesyri_stats.dispossessed == 0
+    assert en_nesyri_stats.miscontrols == 0

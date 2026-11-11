@@ -66,5 +66,11 @@
     "type": {"id": 2, "name": "Ball Recovery"},
     "player": {"id": 3625, "name": "Sofiane Boufal"},
     "team": {"id": 788, "name": "Morocco"}
+  },
+  {
+    "id": "evt-ball-receipt-1",
+    "type": {"id": 42, "name": "Ball Receipt*"},
+    "player": {"id": 6301, "name": "Youssef En-Nesyri"},
+    "team": {"id": 788, "name": "Morocco"}
   }
 ]

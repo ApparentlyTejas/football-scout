@@ -7,6 +7,7 @@ GitHub mirror and some match ids 404) is logged and counted rather than
 aborting the whole run.
 """
 
+import argparse
 import logging
 import sys
 from dataclasses import dataclass
@@ -96,3 +97,37 @@ def run_ingestion(
             summary.matches_ingested += 1
 
     return summary
+
+
+if __name__ == "__main__":
+    # Imported here, rather than at module level, so SessionLocal's
+    # engine creation (which reads DATABASE_URL) only runs for an actual
+    # CLI invocation and never as a side effect of importing this module
+    # (e.g. from tests that only exercise run_ingestion).
+    from app.core.db import SessionLocal
+
+    logging.basicConfig(level=logging.INFO)
+
+    arg_parser = argparse.ArgumentParser(
+        description="Ingest a StatsBomb open-data competition/season into Postgres."
+    )
+    arg_parser.add_argument("--competition-id", type=int, default=43)
+    arg_parser.add_argument("--season-id", type=int, default=106)
+    arg_parser.add_argument("--limit", type=int, default=None)
+    args = arg_parser.parse_args()
+
+    db_session = SessionLocal()
+    try:
+        result = run_ingestion(
+            db_session,
+            competition_id=args.competition_id,
+            season_id=args.season_id,
+            limit=args.limit,
+        )
+        db_session.commit()
+        print(result)
+    except Exception:
+        db_session.rollback()
+        raise
+    finally:
+        db_session.close()

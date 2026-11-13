@@ -91,18 +91,18 @@ def test_ingest_match_creates_expected_rows(session: Session) -> None:
     en_nesyri = _stat_for_player_name(session, lineups_json, "Youssef En-Nesyri")
 
     assert en_nesyri.match_id == match.id
-    assert en_nesyri.passes_attempted == 2
-    assert en_nesyri.passes_completed == 1
-    assert en_nesyri.shots == 1
-    assert en_nesyri.duels == 2
-    assert en_nesyri.aerial_duels == 2
-    assert en_nesyri.interceptions == 1
-    assert en_nesyri.carries == 0
-    assert en_nesyri.pressures == 0
-    assert en_nesyri.ball_recoveries == 0
-    assert en_nesyri.dribbles == 0
+    assert en_nesyri.passes_attempted == 18
+    assert en_nesyri.passes_completed == 12
+    assert en_nesyri.shots == 2
+    assert en_nesyri.duels == 4
+    assert en_nesyri.aerial_duels == 6
+    assert en_nesyri.interceptions == 0
+    assert en_nesyri.carries == 21
+    assert en_nesyri.pressures == 16
+    assert en_nesyri.ball_recoveries == 4
+    assert en_nesyri.dribbles == 4
     assert en_nesyri.dispossessed == 0
-    assert en_nesyri.miscontrols == 0
+    assert en_nesyri.miscontrols == 3
     assert abs(en_nesyri.minutes_played - 90) <= 1
 
 

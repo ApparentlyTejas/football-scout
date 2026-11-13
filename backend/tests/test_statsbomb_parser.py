@@ -39,60 +39,73 @@ def test_parse_lineups_returns_all_players_with_minutes() -> None:
     assert aboukhlal.minutes_played > 20
 
 
+# events_3857276.json is a trimmed subset of the REAL StatsBomb open-data
+# events file for match 3857276 (Morocco vs Canada), events copied
+# unmodified. It contains:
+# - every real event for Youssef En-Nesyri (6301), except that only 2 of
+#   his 30 "Ball Receipt*" events are kept (they are not counted, so his
+#   counters below equal his true full-match values);
+# - Sofiane Boufal's (3625) Duel, Dispossessed and Interception events
+#   plus his one aerial-won Pass (a partial profile);
+# - the team-level "Half Start"/"Half End" events (no "player" key).
+EN_NESYRI_EXPECTED = {
+    "passes_attempted": 18,
+    "passes_completed": 12,
+    "shots": 2,
+    "carries": 21,
+    "pressures": 16,
+    "interceptions": 0,
+    "ball_recoveries": 4,
+    "dribbles": 4,
+    "duels": 4,
+    # 3 "Aerial Lost" Duel events (minutes 0, 66, 71) + 3 aerial wins
+    # flagged on a Pass (25', 26') and a Clearance (74').
+    "aerial_duels": 6,
+    "dispossessed": 0,
+    "miscontrols": 3,
+}
+
+
+def _assert_en_nesyri(stats) -> None:
+    actual = {field: getattr(stats, field) for field in EN_NESYRI_EXPECTED}
+    assert actual == EN_NESYRI_EXPECTED
+
+
 def test_parse_events_counts_known_player_correctly() -> None:
     events_json = _load_fixture("events_3857276.json")
 
     stats = parse_events(events_json)
 
-    en_nesyri_stats = stats[6301]
-    assert en_nesyri_stats.passes_attempted == 2
-    assert en_nesyri_stats.passes_completed == 1
-    assert en_nesyri_stats.shots == 1
-    assert en_nesyri_stats.duels == 2
-    assert en_nesyri_stats.aerial_duels == 2
-    assert en_nesyri_stats.interceptions == 1
-    assert en_nesyri_stats.carries == 0
-    assert en_nesyri_stats.pressures == 0
-    assert en_nesyri_stats.ball_recoveries == 0
-    assert en_nesyri_stats.dribbles == 0
-    assert en_nesyri_stats.dispossessed == 0
-    assert en_nesyri_stats.miscontrols == 0
+    _assert_en_nesyri(stats[6301])
 
     boufal_stats = stats[3625]
-    assert boufal_stats.carries == 1
-    assert boufal_stats.ball_recoveries == 1
-    assert boufal_stats.passes_attempted == 0
+    assert boufal_stats.duels == 5
+    assert boufal_stats.interceptions == 1
+    assert boufal_stats.dispossessed == 1
+    assert boufal_stats.passes_attempted == 1
+    assert boufal_stats.passes_completed == 0
+
+
+def test_parse_events_counts_aerial_wins_and_losses() -> None:
+    events_json = _load_fixture("events_3857276.json")
+
+    stats = parse_events(events_json)
+
+    # Real StatsBomb data has no "Aerial Won" Duel type: an aerial win is
+    # an `aerial_won: true` flag on a Pass/Clearance/Shot/Miscontrol.
+    # Boufal: 2 "Aerial Lost" Duels + 1 aerial-won Pass (minute 49).
+    assert stats[3625].aerial_duels == 3
 
 
 def test_parse_events_ignores_unknown_event_types() -> None:
     events_json = _load_fixture("events_3857276.json")
 
-    # The fixture includes two kinds of "unrecognized" event:
-    # - "Half Start": team-level, no "player" key at all.
-    # - "Ball Receipt*": has a real "player" (6301) but its type name is
-    #   not in the known-counter mapping.
-    # Both must be skipped without raising and without affecting any
-    # player's counted stats.
+    # The fixture includes unrecognized events of two kinds:
+    # - "Half Start"/"Half End": team-level, no "player" key at all.
+    # - "Ball Receipt*", "Block", "Foul Won", "Foul Committed": have a
+    #   real player (6301) but are not in the known-counter mapping.
+    # All must be skipped without raising or affecting counted stats.
     stats = parse_events(events_json)
 
-    # Exactly the two players with real counted events show up; neither
-    # unrecognized event produced a spurious entry or crashed the parser.
     assert set(stats.keys()) == {6301, 3625}
-
-    # The "Ball Receipt*" event for player 6301 must not have bumped any
-    # of his counters - these totals are identical to
-    # test_parse_events_counts_known_player_correctly, which would fail
-    # if "Ball Receipt*" were mistakenly counted as something.
-    en_nesyri_stats = stats[6301]
-    assert en_nesyri_stats.passes_attempted == 2
-    assert en_nesyri_stats.passes_completed == 1
-    assert en_nesyri_stats.shots == 1
-    assert en_nesyri_stats.duels == 2
-    assert en_nesyri_stats.aerial_duels == 2
-    assert en_nesyri_stats.interceptions == 1
-    assert en_nesyri_stats.carries == 0
-    assert en_nesyri_stats.pressures == 0
-    assert en_nesyri_stats.ball_recoveries == 0
-    assert en_nesyri_stats.dribbles == 0
-    assert en_nesyri_stats.dispossessed == 0
-    assert en_nesyri_stats.miscontrols == 0
+    _assert_en_nesyri(stats[6301])

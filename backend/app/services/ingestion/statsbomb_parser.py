@@ -112,6 +112,19 @@ _COUNTER_FIELD_BY_TYPE = {
 }
 
 
+# In real StatsBomb data, a Duel's `duel.type.name` is only ever "Aerial
+# Lost" or "Tackle": there is no "Aerial Won" duel type. An aerial win is
+# instead an `aerial_won: true` flag inside the event's own sub-object,
+# verified on real events for these four types (e.g. `event["pass"]
+# ["aerial_won"]`).
+_AERIAL_WON_KEY_BY_TYPE = {
+    "Pass": "pass",
+    "Clearance": "clearance",
+    "Shot": "shot",
+    "Miscontrol": "miscontrol",
+}
+
+
 def _get_or_create_stats(
     stats_by_player: dict[int, ParsedMatchPlayerStats], player_id: int
 ) -> ParsedMatchPlayerStats:
@@ -140,12 +153,18 @@ def parse_events(events_json: list[dict]) -> dict[int, ParsedMatchPlayerStats]:
         elif type_name == "Duel":
             stats.duels += 1
             duel_type_name = event.get("duel", {}).get("type", {}).get("name", "")
-            if duel_type_name.startswith("Aerial"):
+            if duel_type_name == "Aerial Lost":
                 stats.aerial_duels += 1
         elif type_name in _COUNTER_FIELD_BY_TYPE:
             field_name = _COUNTER_FIELD_BY_TYPE[type_name]
             setattr(stats, field_name, getattr(stats, field_name) + 1)
         # Any other type.name (e.g. "Half Start", "Ball Receipt*") is a
         # no-op: we only track the known counters above.
+
+        # `aerial_duels` is the total contested (won + lost): the losses
+        # are counted from Duel events above, the wins here.
+        aerial_won_key = _AERIAL_WON_KEY_BY_TYPE.get(type_name)
+        if aerial_won_key and event.get(aerial_won_key, {}).get("aerial_won"):
+            stats.aerial_duels += 1
 
     return stats_by_player

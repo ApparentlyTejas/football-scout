@@ -47,3 +47,18 @@ def get_or_create_player(
     player.nationality = nationality
     session.flush()
     return player
+
+
+def list_players(session: Session, limit: int, offset: int) -> list[Player]:
+    """Return a page of players ordered by id, for pagination via
+    `limit`/`offset`."""
+    return list(
+        session.execute(
+            select(Player).order_by(Player.id).limit(limit).offset(offset)
+        ).scalars()
+    )
+
+
+def get_player(session: Session, player_id: int) -> Player | None:
+    """Look up a single Player by primary key, or None if missing."""
+    return session.get(Player, player_id)

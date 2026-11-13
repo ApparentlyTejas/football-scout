@@ -49,7 +49,11 @@ def get_or_create_player(
         return player
 
     player = session.get(Player, external_id.player_id)
-    assert player is not None
+    if player is None:
+        raise LookupError(
+            f"PlayerExternalId {STATSBOMB_SOURCE}:{external_id_value} references "
+            f"missing Player id {external_id.player_id}"
+        )
     player.name = name
     player.nationality = nationality
     if primary_position is not None:

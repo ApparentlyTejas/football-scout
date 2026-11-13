@@ -10,8 +10,8 @@ router = APIRouter()
 
 @router.get("", response_model=list[PlayerOut])
 def list_players_endpoint(
-    limit: int = Query(default=50, le=200),
-    offset: int = Query(default=0),
+    limit: int = Query(default=50, ge=1, le=200),
+    offset: int = Query(default=0, ge=0),
     db: Session = Depends(get_db),
 ) -> list[PlayerOut]:
     return list(list_players(db, limit=limit, offset=offset))

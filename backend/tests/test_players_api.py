@@ -85,3 +85,15 @@ def test_get_player_by_id_returns_player(client: TestClient, session: Session) -
     assert body["name"] == "Youssef En-Nesyri"
     assert body["nationality"] == "Morocco"
     assert body["primary_position"] == "Forward"
+
+
+@pytest.mark.parametrize(
+    "params",
+    [{"limit": -1}, {"limit": 0}, {"limit": 201}, {"offset": -1}],
+)
+def test_list_players_rejects_out_of_range_pagination(
+    client: TestClient, params: dict
+) -> None:
+    response = client.get("/api/v1/players", params=params)
+
+    assert response.status_code == 422

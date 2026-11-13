@@ -21,6 +21,13 @@ from app.repositories.team_repository import get_or_create_team
 from app.services.ingestion.statsbomb_parser import parse_events, parse_lineups
 
 
+def _team_country(team_json: dict) -> str | None:
+    """The team's country name from a StatsBomb match entry's
+    `home_team`/`away_team` object (`{"country": {"id", "name"}}`)."""
+    country = team_json.get("country")
+    return country["name"] if country else None
+
+
 def ingest_match(
     session: Session,
     competition: dict,
@@ -39,8 +46,10 @@ def ingest_match(
     `competition_id` is resolved here from the competition just
     upserted); `match_json` mirrors StatsBomb's `matches/<comp>/<season>.json`
     entry shape: `{"match_id", "match_date", "home_team":
-    {"home_team_id", "home_team_name"}, "away_team": {"away_team_id",
-    "away_team_name"}, "home_score", "away_score"}`.
+    {"home_team_id", "home_team_name", "country": {"name"}}, "away_team":
+    {"away_team_id", "away_team_name", "country": {"name"}}, "home_score",
+    "away_score"}`. A team without a "country" entry is stored with an
+    empty country.
     """
     competition_row = get_or_create_competition(
         session,
@@ -63,12 +72,12 @@ def ingest_match(
     home_team = get_or_create_team(
         session,
         name=home_team_json["home_team_name"],
-        country=None,
+        country=_team_country(home_team_json),
     )
     away_team = get_or_create_team(
         session,
         name=away_team_json["away_team_name"],
-        country=None,
+        country=_team_country(away_team_json),
     )
 
     match_date = match_json["match_date"]

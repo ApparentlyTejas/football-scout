@@ -10,6 +10,7 @@ from app.models.base import Base
 from app.models.match import Match
 from app.models.player import Player
 from app.models.player_match_stat import PlayerMatchStat
+from app.models.team import Team
 from app.services.ingestion.statsbomb_ingestion_service import ingest_match
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures" / "statsbomb"
@@ -47,8 +48,16 @@ SEASON = {
 MATCH_JSON = {
     "match_id": 3857276,
     "match_date": "2022-12-01",
-    "home_team": {"home_team_id": 788, "home_team_name": "Morocco"},
-    "away_team": {"away_team_id": 1833, "away_team_name": "Canada"},
+    "home_team": {
+        "home_team_id": 788,
+        "home_team_name": "Morocco",
+        "country": {"id": 154, "name": "Morocco"},
+    },
+    "away_team": {
+        "away_team_id": 1833,
+        "away_team_name": "Canada",
+        "country": {"id": 40, "name": "Canada"},
+    },
     "home_score": 2,
     "away_score": 1,
 }
@@ -232,3 +241,18 @@ def test_ingest_match_sets_primary_position(session: Session) -> None:
         select(Player).where(Player.name == "Youssef En-Nesyri")
     ).scalar_one()
     assert en_nesyri.primary_position == "Center Forward"
+
+
+def test_ingest_match_stores_team_country(session: Session) -> None:
+    ingest_match(
+        session=session,
+        competition=COMPETITION,
+        season=SEASON,
+        match_json=MATCH_JSON,
+        lineups_json=_load_fixture("lineups_3857276.json"),
+        events_json=_load_fixture("events_3857276.json"),
+    )
+    session.commit()
+
+    countries = {t.name: t.country for t in session.execute(select(Team)).scalars().all()}
+    assert countries == {"Morocco": "Morocco", "Canada": "Canada"}

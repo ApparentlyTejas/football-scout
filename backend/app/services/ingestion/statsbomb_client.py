@@ -5,16 +5,28 @@ TIMEOUT_SECONDS = 10
 
 
 class StatsBombFetchError(Exception):
-    """Raised when a StatsBomb open-data request does not return HTTP 200."""
+    """Raised when a StatsBomb open-data request fails: a network error
+    (connection failure, timeout, ...), a non-200 HTTP status, or a
+    response body that is not valid JSON."""
 
 
 def _get_json(url: str) -> list[dict]:
-    response = requests.get(url, timeout=TIMEOUT_SECONDS)
+    try:
+        response = requests.get(url, timeout=TIMEOUT_SECONDS)
+    except requests.exceptions.RequestException as exc:
+        raise StatsBombFetchError(f"StatsBomb fetch failed: {url} ({exc})") from exc
     if response.status_code != 200:
         raise StatsBombFetchError(
             f"StatsBomb fetch failed: {url} ({response.status_code})"
         )
-    return response.json()
+    try:
+        return response.json()
+    except ValueError as exc:
+        # Covers json.JSONDecodeError and requests' own JSONDecodeError,
+        # both ValueError subclasses.
+        raise StatsBombFetchError(
+            f"StatsBomb fetch returned invalid JSON: {url} ({exc})"
+        ) from exc
 
 
 def fetch_competitions() -> list[dict]:

@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 import pytest
+import requests
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import Session, sessionmaker
 
@@ -128,3 +129,53 @@ def test_run_ingestion_respects_limit(
     session.commit()
 
     assert summary.matches_attempted == 2
+
+
+def test_run_ingestion_counts_network_error_as_per_match_failure(
+    session: Session, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """A ConnectionError raised by `requests` inside the real fetch layer
+    (not a monkeypatched fetch_* function) must be counted as one failed
+    match, not abort the whole run."""
+    lineups_json = _load_fixture("lineups_3857276.json")
+    events_json = _load_fixture("events_3857276.json")
+
+    failing_match_id = 999999
+    match_stubs = [_match_stub(failing_match_id), _match_stub(REAL_MATCH_ID)]
+
+    monkeypatch.setattr(
+        ingest_statsbomb, "fetch_competitions", lambda: [COMPETITION_ENTRY]
+    )
+    monkeypatch.setattr(
+        ingest_statsbomb, "fetch_matches", lambda competition_id, season_id: match_stubs
+    )
+
+    class FakeResponse:
+        status_code = 200
+
+        def __init__(self, payload: list[dict]) -> None:
+            self._payload = payload
+
+        def json(self) -> list[dict]:
+            return self._payload
+
+    def fake_get(url: str, timeout: float) -> FakeResponse:
+        if f"/{failing_match_id}.json" in url:
+            raise requests.exceptions.ConnectionError("connection reset")
+        if "/lineups/" in url:
+            return FakeResponse(lineups_json)
+        return FakeResponse(events_json)
+
+    monkeypatch.setattr(requests, "get", fake_get)
+
+    summary = ingest_statsbomb.run_ingestion(
+        session, competition_id=43, season_id=106
+    )
+    session.commit()
+
+    assert summary.matches_attempted == 2
+    assert summary.matches_failed == 1
+    assert summary.matches_ingested == 1
+
+    matches = session.execute(select(Match)).scalars().all()
+    assert [m.statsbomb_match_id for m in matches] == [REAL_MATCH_ID]

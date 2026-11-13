@@ -49,42 +49,124 @@ def _parse_clock(value: str) -> float:
 
 
 def _period_end_minutes(to_period: int | None) -> float:
-    """Approximate the clock minute a period ends at, when a position's
-    "to" timestamp is missing.
+    """Fallback match-end approximation, used only when `parse_lineups`
+    is not given the match's events.
 
-    DOCUMENTED APPROXIMATION: in the verified StatsBomb open-data shape,
-    a position with `"to": None` always carries `end_reason == "Final
-    Whistle"` -- i.e. the player held that position until the actual end
-    of the match, not merely until the end of whichever period it
-    started in. So we treat `to_period == 1` as ending at 45 (the one
-    case where a position genuinely only spans the first half with no
-    further record), and treat everything else (`to_period == 2`, or
-    `to_period` missing/None, which is the common "ran to full time"
-    case) as ending at 90. This ignores stoppage time beyond 90/45, which
-    is an acceptable approximation for this task.
+    A position with `"to": None` carries `end_reason == "Final Whistle"`,
+    so the player held it until the end of the match. Without events we
+    can't know when that was, so `to_period == 1` is treated as ending at
+    45 and everything else as ending at 90, ignoring stoppage and extra
+    time. Pass `events_json` to `parse_lineups` for the real match end.
     """
     return 45.0 if to_period == 1 else 90.0
 
 
-def _position_minutes(position: dict) -> float:
+# Period 5 is the penalty shootout: its events carry clock minutes
+# (120:00 onwards) but it is not playing time.
+_PENALTY_SHOOTOUT_PERIOD = 5
+
+
+def _match_end_minutes(events_json: list[dict] | None) -> float | None:
+    """The match clock (in minutes) at the last moment of play: the latest
+    `minute`/`second` over all events outside the penalty shootout, which
+    in real data is the final "Half End" event (e.g. 93:54 for a regular
+    match, 124:07 for the 2022 World Cup final). None if there are no
+    events to look at."""
+    clocks = [
+        event["minute"] + event["second"] / 60
+        for event in events_json or []
+        if event.get("period", 0) < _PENALTY_SHOOTOUT_PERIOD
+    ]
+    return max(clocks) if clocks else None
+
+
+def _is_permanent_exit(end_reason: str) -> bool:
+    """A position ending in a substitution off or a red card means the
+    player left the match for good (unlike "Player Off", a temporary
+    exit such as for treatment)."""
+    return end_reason.startswith("Substitution - Off") or "Red Card" in end_reason
+
+
+def _position_interval(
+    position: dict, match_end: float | None
+) -> tuple[float, float] | None:
+    """The (start, end) match-clock minutes of one position record, or
+    None if the record is empty or runs backwards.
+
+    Real StatsBomb lineups occasionally contain records whose "to" is
+    earlier than their "from" (e.g. Messi's "115:32" -> "28:11" in the
+    2022 final): the times belong to neighbouring records, which cover
+    that span anyway, so such a record is skipped rather than counted.
+    """
     start = _parse_clock(position["from"])
     to = position.get("to")
     if to is not None:
         end = _parse_clock(to)
+    elif match_end is not None:
+        end = match_end
     else:
         end = _period_end_minutes(position.get("to_period"))
-    return max(0.0, end - start)
+    if end <= start:
+        return None
+    return start, end
 
 
-def parse_lineups(lineups_json: list[dict]) -> list[ParsedPlayerAppearance]:
+def _minutes_played(positions: list[dict], match_end: float | None) -> float:
+    """Total minutes a player was on the pitch.
+
+    Position records can overlap (real data has e.g. a 00:00-120:35
+    record alongside an open-ended 41:20 one after a formation change),
+    so the intervals are merged before summing rather than added up
+    record by record. The result is then clipped at the player's earliest
+    permanent exit (substitution off / red card): in real data an
+    overlapping open-ended record can otherwise outlive the substitution.
+    """
+    intervals = []
+    exit_at = None
+    for position in positions:
+        interval = _position_interval(position, match_end)
+        if interval is None:
+            continue
+        intervals.append(interval)
+        if position.get("to") is not None and _is_permanent_exit(
+            position.get("end_reason", "")
+        ):
+            exit_at = interval[1] if exit_at is None else min(exit_at, interval[1])
+
+    total = 0.0
+    current_start = current_end = None
+    for start, end in sorted(intervals):
+        if exit_at is not None:
+            end = min(end, exit_at)
+            if end <= start:
+                continue
+        if current_end is None or start > current_end:
+            if current_end is not None:
+                total += current_end - current_start
+            current_start, current_end = start, end
+        else:
+            current_end = max(current_end, end)
+    if current_end is not None:
+        total += current_end - current_start
+    return total
+
+
+def parse_lineups(
+    lineups_json: list[dict], events_json: list[dict] | None = None
+) -> list[ParsedPlayerAppearance]:
+    """Parse each lineup player into an appearance.
+
+    `events_json` (the same match's events) is used to find the real
+    match end for open-ended positions; without it (or if it is empty),
+    open-ended positions fall back to ending at 45 or 90.
+    """
+    match_end = _match_end_minutes(events_json)
     appearances: list[ParsedPlayerAppearance] = []
     for team in lineups_json:
         team_id = team["team_id"]
         team_name = team["team_name"]
         for player in team["lineup"]:
-            minutes_played = sum(
-                _position_minutes(position) for position in player["positions"]
-            )
+            minutes_played = _minutes_played(player["positions"], match_end)
             country = player.get("country")
             nationality = country["name"] if country else None
             appearances.append(

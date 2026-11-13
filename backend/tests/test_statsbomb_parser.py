@@ -109,3 +109,68 @@ def test_parse_events_ignores_unknown_event_types() -> None:
 
     assert set(stats.keys()) == {6301, 3625}
     _assert_en_nesyri(stats[6301])
+
+
+# World Cup 2022 final (3869685), real StatsBomb data: went to extra time
+# and penalties. lineups_3869685.json is the full real lineups file;
+# events_3869685_period_markers.json keeps only the real "Half Start" /
+# "Half End" events, which is all parse_lineups needs to find the match
+# end. Period 4 (extra time, second half) ends at 124:07; period 5 is the
+# penalty shootout (clock 120:00-125:58) and is not playing time.
+FINAL_MATCH_END = 124 + 7 / 60
+
+
+def _final_appearances() -> dict[int, object]:
+    appearances = parse_lineups(
+        _load_fixture("lineups_3869685.json"),
+        _load_fixture("events_3869685_period_markers.json"),
+    )
+    return {a.statsbomb_player_id: a for a in appearances}
+
+
+def test_parse_lineups_credits_extra_time_substitutes() -> None:
+    by_id = _final_appearances()
+
+    # Axel Disasi came on at 120:35 (period 4), open-ended to full time.
+    assert abs(by_id[7439].minutes_played - (FINAL_MATCH_END - (120 + 35 / 60))) < 0.01
+    # Youssouf Fofana came on at 95:10 (period 3).
+    assert abs(by_id[11990].minutes_played - (FINAL_MATCH_END - (95 + 10 / 60))) < 0.01
+    # Hugo Lloris played the whole 120' + stoppage, no longer capped at 90.
+    assert abs(by_id[3099].minutes_played - FINAL_MATCH_END) < 0.01
+
+
+def test_parse_lineups_merges_overlapping_position_records() -> None:
+    by_id = _final_appearances()
+
+    for appearance in by_id.values():
+        assert 0 <= appearance.minutes_played <= 125
+
+    # Lionel Messi: records 00:00-115:32, 115:32-28:11 (a real record whose
+    # "to" is earlier than its "from") and 28:19-open. Naively summed this
+    # was ~177 minutes; merged, he covers the whole match.
+    assert abs(by_id[5503].minutes_played - FINAL_MATCH_END) < 0.01
+
+    # Jules Kounde: 00:00-120:35 ending "Substitution - Off (Tactical)",
+    # plus an overlapping open-ended 41:20 record. Naively ~169 minutes;
+    # he really left at 120:35.
+    assert abs(by_id[4445].minutes_played - (120 + 35 / 60)) < 0.01
+    # Raphael Varane: same shape, off injured at 112:28 (naively ~161).
+    assert abs(by_id[5485].minutes_played - (112 + 28 / 60)) < 0.01
+
+    # Gonzalo Montiel came on at 90:00 (records out of order in the
+    # source); Marcos Acuna came on at 63:51.
+    assert abs(by_id[28263].minutes_played - (FINAL_MATCH_END - 90)) < 0.01
+    assert abs(by_id[19597].minutes_played - (FINAL_MATCH_END - (63 + 51 / 60))) < 0.01
+
+    # Unused substitutes have no position records.
+    assert by_id[3379].minutes_played == 0
+
+
+def test_parse_lineups_uses_real_match_end_for_regular_time() -> None:
+    appearances = parse_lineups(
+        _load_fixture("lineups_3857276.json"), _load_fixture("events_3857276.json")
+    )
+    by_id = {a.statsbomb_player_id: a for a in appearances}
+
+    # 3857276's second half ends at 93:54 in the real events.
+    assert abs(by_id[6301].minutes_played - (93 + 54 / 60)) < 0.01

@@ -1,0 +1,582 @@
+[
+  {
+    "id": "954f6855-de22-46a2-8d09-6fe94eec2b9b",
+    "index": 3,
+    "period": 1,
+    "timestamp": "00:00:00.000",
+    "minute": 0,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 1,
+    "possession_team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "6404a8e8-afaf-489d-b65e-173a237ffed5"
+    ]
+  },
+  {
+    "id": "6404a8e8-afaf-489d-b65e-173a237ffed5",
+    "index": 4,
+    "period": 1,
+    "timestamp": "00:00:00.000",
+    "minute": 0,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 1,
+    "possession_team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "954f6855-de22-46a2-8d09-6fe94eec2b9b"
+    ]
+  },
+  {
+    "id": "595f7a7f-5d24-4f99-b4e8-bacaeaa2de17",
+    "index": 1750,
+    "period": 1,
+    "timestamp": "00:52:34.569",
+    "minute": 52,
+    "second": 34,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 79,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "3ac68cd5-7121-4d73-bec2-9a220743c465"
+    ]
+  },
+  {
+    "id": "3ac68cd5-7121-4d73-bec2-9a220743c465",
+    "index": 1751,
+    "period": 1,
+    "timestamp": "00:52:34.569",
+    "minute": 52,
+    "second": 34,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 79,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "595f7a7f-5d24-4f99-b4e8-bacaeaa2de17"
+    ]
+  },
+  {
+    "id": "e84fb5b3-270f-4427-bf97-1a6eaec7285f",
+    "index": 1752,
+    "period": 2,
+    "timestamp": "00:00:00.000",
+    "minute": 45,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 79,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "3e8de8c9-8be8-4921-96ec-1a29ce8fd3d4"
+    ]
+  },
+  {
+    "id": "3e8de8c9-8be8-4921-96ec-1a29ce8fd3d4",
+    "index": 1753,
+    "period": 2,
+    "timestamp": "00:00:00.000",
+    "minute": 45,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 79,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "e84fb5b3-270f-4427-bf97-1a6eaec7285f"
+    ]
+  },
+  {
+    "id": "f397f367-ab83-4815-93d9-b1874bbda346",
+    "index": 3439,
+    "period": 2,
+    "timestamp": "00:53:37.921",
+    "minute": 98,
+    "second": 37,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 196,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "440c7e28-8628-4082-8f69-b465068a927b"
+    ]
+  },
+  {
+    "id": "440c7e28-8628-4082-8f69-b465068a927b",
+    "index": 3440,
+    "period": 2,
+    "timestamp": "00:53:37.921",
+    "minute": 98,
+    "second": 37,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 196,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "f397f367-ab83-4815-93d9-b1874bbda346"
+    ]
+  },
+  {
+    "id": "f5de15c8-0f4c-4de3-a7a5-67f8326d1042",
+    "index": 3441,
+    "period": 3,
+    "timestamp": "00:00:00.000",
+    "minute": 90,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 196,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "97489f9c-4763-4be3-a1c5-453b71c710a8"
+    ]
+  },
+  {
+    "id": "97489f9c-4763-4be3-a1c5-453b71c710a8",
+    "index": 3442,
+    "period": 3,
+    "timestamp": "00:00:00.000",
+    "minute": 90,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 196,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "f5de15c8-0f4c-4de3-a7a5-67f8326d1042"
+    ]
+  },
+  {
+    "id": "2cc2184c-c5ef-43ba-8347-3d0889ae4703",
+    "index": 3976,
+    "period": 3,
+    "timestamp": "00:16:04.648",
+    "minute": 106,
+    "second": 4,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 222,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "8a65b685-e82c-4ab6-9aa3-00192328a7d4"
+    ]
+  },
+  {
+    "id": "8a65b685-e82c-4ab6-9aa3-00192328a7d4",
+    "index": 3977,
+    "period": 3,
+    "timestamp": "00:16:04.648",
+    "minute": 106,
+    "second": 4,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 222,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "2cc2184c-c5ef-43ba-8347-3d0889ae4703"
+    ]
+  },
+  {
+    "id": "282c606f-3f21-4629-b770-f09c61ba7689",
+    "index": 3978,
+    "period": 4,
+    "timestamp": "00:00:00.000",
+    "minute": 105,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 222,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "55134cc4-8d38-44e2-9303-ce53ab7feb3d"
+    ]
+  },
+  {
+    "id": "55134cc4-8d38-44e2-9303-ce53ab7feb3d",
+    "index": 3979,
+    "period": 4,
+    "timestamp": "00:00:00.000",
+    "minute": 105,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 222,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "282c606f-3f21-4629-b770-f09c61ba7689"
+    ]
+  },
+  {
+    "id": "f062c70e-e942-4997-bba1-f57b0ac1baf7",
+    "index": 4385,
+    "period": 4,
+    "timestamp": "00:19:07.472",
+    "minute": 124,
+    "second": 7,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 247,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "da654dbc-5e9d-4067-ab4a-2db561a77c8f"
+    ]
+  },
+  {
+    "id": "da654dbc-5e9d-4067-ab4a-2db561a77c8f",
+    "index": 4386,
+    "period": 4,
+    "timestamp": "00:19:07.472",
+    "minute": 124,
+    "second": 7,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 247,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "f062c70e-e942-4997-bba1-f57b0ac1baf7"
+    ]
+  },
+  {
+    "id": "4934823b-d303-4ca0-bbcd-50c725470e22",
+    "index": 4387,
+    "period": 5,
+    "timestamp": "00:00:00.000",
+    "minute": 120,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 247,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "f792bb69-f5b3-4945-82f8-3b98382e6605"
+    ]
+  },
+  {
+    "id": "f792bb69-f5b3-4945-82f8-3b98382e6605",
+    "index": 4388,
+    "period": 5,
+    "timestamp": "00:00:00.000",
+    "minute": 120,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 247,
+    "possession_team": {
+      "id": 771,
+      "name": "France"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "4934823b-d303-4ca0-bbcd-50c725470e22"
+    ]
+  },
+  {
+    "id": "0e712309-2130-4ad9-ab32-cda2e26c4d0b",
+    "index": 4406,
+    "period": 5,
+    "timestamp": "00:05:58.866",
+    "minute": 125,
+    "second": 58,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 255,
+    "possession_team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "play_pattern": {
+      "id": 5,
+      "name": "Other"
+    },
+    "team": {
+      "id": 771,
+      "name": "France"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "4f66bdf1-2c51-483a-b45a-89b525bc23c0"
+    ]
+  },
+  {
+    "id": "4f66bdf1-2c51-483a-b45a-89b525bc23c0",
+    "index": 4407,
+    "period": 5,
+    "timestamp": "00:05:58.866",
+    "minute": 125,
+    "second": 58,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 255,
+    "possession_team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "play_pattern": {
+      "id": 5,
+      "name": "Other"
+    },
+    "team": {
+      "id": 779,
+      "name": "Argentina"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "0e712309-2130-4ad9-ab32-cda2e26c4d0b"
+    ]
+  }
+]

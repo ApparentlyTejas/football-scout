@@ -86,7 +86,7 @@ def ingest_match(
         away_score=match_json["away_score"],
     )
 
-    appearances = parse_lineups(lineups_json)
+    appearances = parse_lineups(lineups_json, events_json)
     stats_by_player = parse_events(events_json)
 
     # StatsBomb's lineup team ids are the same ids used for home/away

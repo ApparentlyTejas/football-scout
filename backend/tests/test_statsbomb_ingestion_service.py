@@ -103,7 +103,9 @@ def test_ingest_match_creates_expected_rows(session: Session) -> None:
     assert en_nesyri.dribbles == 4
     assert en_nesyri.dispossessed == 0
     assert en_nesyri.miscontrols == 3
-    assert abs(en_nesyri.minutes_played - 90) <= 1
+    # Open-ended until the real final whistle at 93:54 (from events_json),
+    # rounded to the Integer column.
+    assert en_nesyri.minutes_played == 94
 
 
 def test_ingest_match_is_idempotent(session: Session) -> None:

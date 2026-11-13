@@ -12,11 +12,16 @@ def get_or_create_player(
     statsbomb_player_id: int,
     name: str,
     nationality: str | None,
+    primary_position: str | None = None,
 ) -> Player:
     """Look up a Player through its `PlayerExternalId(source="statsbomb",
     external_id=str(statsbomb_player_id))` row, updating the matched
     Player's fields in place if found, or creating both the Player and its
-    external-id row together if missing."""
+    external-id row together if missing.
+
+    A `primary_position` of None never overwrites a position already
+    stored (a match whose lineup lacks position data shouldn't erase it).
+    """
     external_id_value = str(statsbomb_player_id)
 
     external_id = session.execute(
@@ -27,7 +32,9 @@ def get_or_create_player(
     ).scalar_one_or_none()
 
     if external_id is None:
-        player = Player(name=name, nationality=nationality)
+        player = Player(
+            name=name, nationality=nationality, primary_position=primary_position
+        )
         session.add(player)
         session.flush()
 
@@ -45,6 +52,8 @@ def get_or_create_player(
     assert player is not None
     player.name = name
     player.nationality = nationality
+    if primary_position is not None:
+        player.primary_position = primary_position
     session.flush()
     return player
 

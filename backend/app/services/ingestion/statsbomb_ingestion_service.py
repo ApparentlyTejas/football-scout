@@ -103,6 +103,7 @@ def ingest_match(
             statsbomb_player_id=appearance.statsbomb_player_id,
             name=appearance.name,
             nationality=appearance.nationality,
+            primary_position=appearance.position,
         )
 
         team = team_by_statsbomb_id[appearance.team_statsbomb_id]

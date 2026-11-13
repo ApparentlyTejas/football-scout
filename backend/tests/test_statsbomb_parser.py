@@ -174,3 +174,22 @@ def test_parse_lineups_uses_real_match_end_for_regular_time() -> None:
 
     # 3857276's second half ends at 93:54 in the real events.
     assert abs(by_id[6301].minutes_played - (93 + 54 / 60)) < 0.01
+
+
+def test_parse_lineups_picks_position_with_most_minutes() -> None:
+    by_id = _final_appearances()
+
+    # Marcus Thuram: Center Forward/Left Wing/Right Center Forward spells,
+    # then Left Midfield from 74:05 to full time (the longest).
+    assert by_id[2972].position == "Left Midfield"
+    # Messi: Right Wing for all but his 115:32+ Right Center Forward spell.
+    assert by_id[5503].position == "Right Wing"
+    # Unused substitute: no position records at all.
+    assert by_id[3379].position is None
+
+    appearances = parse_lineups(
+        _load_fixture("lineups_3857276.json"), _load_fixture("events_3857276.json")
+    )
+    by_id = {a.statsbomb_player_id: a for a in appearances}
+    # En-Nesyri: Center Forward 00:00-76:14, then Right Wing to 93:54.
+    assert by_id[6301].position == "Center Forward"

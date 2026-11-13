@@ -1,3 +1,4 @@
+import copy
 import json
 from pathlib import Path
 
@@ -189,3 +190,45 @@ def test_player_with_zero_events_still_gets_a_stats_row(session: Session) -> Non
     assert stat.dispossessed == 0
     assert stat.miscontrols == 0
     assert stat.minutes_played is not None
+
+
+def test_ingest_match_sets_primary_position(session: Session) -> None:
+    lineups_json = _load_fixture("lineups_3857276.json")
+    events_json = _load_fixture("events_3857276.json")
+
+    ingest_match(
+        session=session,
+        competition=COMPETITION,
+        season=SEASON,
+        match_json=MATCH_JSON,
+        lineups_json=lineups_json,
+        events_json=events_json,
+    )
+    session.commit()
+
+    players_by_name = {p.name: p for p in session.execute(select(Player)).scalars().all()}
+    assert players_by_name["Youssef En-Nesyri"].primary_position == "Center Forward"
+    assert players_by_name["Sofiane Boufal"].primary_position == "Left Wing"
+
+    # Re-ingesting data that lacks position records for En-Nesyri must
+    # not wipe the position already stored.
+    stripped = copy.deepcopy(lineups_json)
+    for team in stripped:
+        for player in team["lineup"]:
+            if player["player_id"] == 6301:
+                player["positions"] = []
+
+    ingest_match(
+        session=session,
+        competition=COMPETITION,
+        season=SEASON,
+        match_json=MATCH_JSON,
+        lineups_json=stripped,
+        events_json=events_json,
+    )
+    session.commit()
+
+    en_nesyri = session.execute(
+        select(Player).where(Player.name == "Youssef En-Nesyri")
+    ).scalar_one()
+    assert en_nesyri.primary_position == "Center Forward"

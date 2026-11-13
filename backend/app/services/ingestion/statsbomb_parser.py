@@ -16,6 +16,10 @@ class ParsedPlayerAppearance:
     team_statsbomb_id: int
     team_name: str
     minutes_played: float
+    # The StatsBomb position name (e.g. "Center Forward") the player spent
+    # the most minutes in this match; None if they have no position records
+    # (an unused substitute).
+    position: str | None = None
 
 
 @dataclass
@@ -151,6 +155,24 @@ def _minutes_played(positions: list[dict], match_end: float | None) -> float:
     return total
 
 
+def _main_position(positions: list[dict], match_end: float | None) -> str | None:
+    """The position name with the most total minutes across the player's
+    records (ties go to the one listed first), or None if no record
+    covers any time."""
+    minutes_by_position: dict[str, float] = {}
+    for position in positions:
+        interval = _position_interval(position, match_end)
+        if interval is None:
+            continue
+        name = position["position"]
+        minutes_by_position[name] = (
+            minutes_by_position.get(name, 0.0) + interval[1] - interval[0]
+        )
+    if not minutes_by_position:
+        return None
+    return max(minutes_by_position, key=minutes_by_position.__getitem__)
+
+
 def parse_lineups(
     lineups_json: list[dict], events_json: list[dict] | None = None
 ) -> list[ParsedPlayerAppearance]:
@@ -177,6 +199,7 @@ def parse_lineups(
                     team_statsbomb_id=team_id,
                     team_name=team_name,
                     minutes_played=minutes_played,
+                    position=_main_position(player["positions"], match_end),
                 )
             )
     return appearances

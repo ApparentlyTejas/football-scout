@@ -115,6 +115,29 @@ def _position_interval(
     return start, end
 
 
+def _earliest_permanent_exit(
+    positions: list[dict], match_end: float | None
+) -> float | None:
+    """The earliest match-clock minute at which the player permanently
+    left (substitution off / red card), or None if no record shows one.
+
+    Both minutes-played and main-position derivation need this: an
+    overlapping open-ended record can otherwise outlive the player's
+    real exit in either calculation.
+    """
+    exit_at = None
+    for position in positions:
+        if position.get("to") is None or not _is_permanent_exit(
+            position.get("end_reason", "")
+        ):
+            continue
+        interval = _position_interval(position, match_end)
+        if interval is None:
+            continue
+        exit_at = interval[1] if exit_at is None else min(exit_at, interval[1])
+    return exit_at
+
+
 def _minutes_played(positions: list[dict], match_end: float | None) -> float:
     """Total minutes a player was on the pitch.
 
@@ -125,17 +148,13 @@ def _minutes_played(positions: list[dict], match_end: float | None) -> float:
     permanent exit (substitution off / red card): in real data an
     overlapping open-ended record can otherwise outlive the substitution.
     """
+    exit_at = _earliest_permanent_exit(positions, match_end)
     intervals = []
-    exit_at = None
     for position in positions:
         interval = _position_interval(position, match_end)
         if interval is None:
             continue
         intervals.append(interval)
-        if position.get("to") is not None and _is_permanent_exit(
-            position.get("end_reason", "")
-        ):
-            exit_at = interval[1] if exit_at is None else min(exit_at, interval[1])
 
     total = 0.0
     current_start = current_end = None
@@ -158,16 +177,26 @@ def _minutes_played(positions: list[dict], match_end: float | None) -> float:
 def _main_position(positions: list[dict], match_end: float | None) -> str | None:
     """The position name with the most total minutes across the player's
     records (ties go to the one listed first), or None if no record
-    covers any time."""
+    covers any time.
+
+    Clipped at the player's earliest permanent exit, same as
+    _minutes_played: otherwise an overlapping open-ended record can
+    outvote the player's real last position with one that outlived
+    their actual substitution off.
+    """
+    exit_at = _earliest_permanent_exit(positions, match_end)
     minutes_by_position: dict[str, float] = {}
     for position in positions:
         interval = _position_interval(position, match_end)
         if interval is None:
             continue
+        start, end = interval
+        if exit_at is not None:
+            end = min(end, exit_at)
+            if end <= start:
+                continue
         name = position["position"]
-        minutes_by_position[name] = (
-            minutes_by_position.get(name, 0.0) + interval[1] - interval[0]
-        )
+        minutes_by_position[name] = minutes_by_position.get(name, 0.0) + end - start
     if not minutes_by_position:
         return None
     return max(minutes_by_position, key=minutes_by_position.__getitem__)

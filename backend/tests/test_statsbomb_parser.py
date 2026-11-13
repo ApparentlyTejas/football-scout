@@ -1,7 +1,12 @@
 import json
 from pathlib import Path
 
-from app.services.ingestion.statsbomb_parser import parse_events, parse_lineups
+from app.services.ingestion.statsbomb_parser import (
+    _main_position,
+    _minutes_played,
+    parse_events,
+    parse_lineups,
+)
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures" / "statsbomb"
 
@@ -174,6 +179,32 @@ def test_parse_lineups_uses_real_match_end_for_regular_time() -> None:
 
     # 3857276's second half ends at 93:54 in the real events.
     assert abs(by_id[6301].minutes_played - (93 + 54 / 60)) < 0.01
+
+
+def test_main_position_clips_overlapping_phantom_record_at_real_exit() -> None:
+    # A permanent exit at 70' (Substitution - Off) plus an overlapping
+    # open-ended record under a DIFFERENT position name, as real
+    # overlapping-record data sometimes carries. Without clipping the
+    # phantom record at the real exit, its unclipped 20:00-120:00 span
+    # (100 minutes) would outvote the real 70-minute spell.
+    positions = [
+        {
+            "position": "Center Back",
+            "from": "00:00",
+            "to": "70:00",
+            "to_period": 2,
+            "end_reason": "Substitution - Off (Tactical)",
+        },
+        {
+            "position": "Left Back",
+            "from": "20:00",
+            "to": None,
+            "end_reason": "Final Whistle",
+        },
+    ]
+
+    assert _minutes_played(positions, match_end=120.0) == 70.0
+    assert _main_position(positions, match_end=120.0) == "Center Back"
 
 
 def test_parse_lineups_picks_position_with_most_minutes() -> None:

@@ -45,3 +45,5 @@ ml/models/*
 
 # Docker
 *.log
+
+.worktrees/

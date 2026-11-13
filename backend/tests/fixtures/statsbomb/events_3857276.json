@@ -1,0 +1,5018 @@
+[
+  {
+    "id": "c6dcab53-5a07-4a6e-ab8b-64e9f9133d19",
+    "index": 3,
+    "period": 1,
+    "timestamp": "00:00:00.000",
+    "minute": 0,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 1,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "396c6ebb-5ba7-415c-ba37-88ff51f7c737"
+    ]
+  },
+  {
+    "id": "396c6ebb-5ba7-415c-ba37-88ff51f7c737",
+    "index": 4,
+    "period": 1,
+    "timestamp": "00:00:00.000",
+    "minute": 0,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 1,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "c6dcab53-5a07-4a6e-ab8b-64e9f9133d19"
+    ]
+  },
+  {
+    "id": "05a57281-9295-408a-9c4f-e32d7fad4d96",
+    "index": 5,
+    "period": 1,
+    "timestamp": "00:00:00.460",
+    "minute": 0,
+    "second": 0,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 2,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 9,
+      "name": "From Kick Off"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      61.0,
+      40.1
+    ],
+    "duration": 0.83469,
+    "related_events": [
+      "1267faf9-e033-4985-925a-2f9521d63bc0"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 5234,
+        "name": "Sofyan Amrabat"
+      },
+      "length": 12.557467,
+      "angle": 3.045886,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        48.5,
+        41.3
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      },
+      "type": {
+        "id": 65,
+        "name": "Kick Off"
+      }
+    }
+  },
+  {
+    "id": "7039a2db-9f6d-40af-98f9-771f2f24063a",
+    "index": 56,
+    "period": 1,
+    "timestamp": "00:00:51.887",
+    "minute": 0,
+    "second": 51,
+    "type": {
+      "id": 42,
+      "name": "Ball Receipt*"
+    },
+    "possession": 2,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 9,
+      "name": "From Kick Off"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      111.4,
+      47.9
+    ],
+    "related_events": [
+      "187e3b88-85a6-4a14-a10c-2cb5a73def7a"
+    ],
+    "ball_receipt": {
+      "outcome": {
+        "id": 9,
+        "name": "Incomplete"
+      }
+    }
+  },
+  {
+    "id": "649387db-22e9-443e-94e4-68b51d877ed6",
+    "index": 57,
+    "period": 1,
+    "timestamp": "00:00:51.887",
+    "minute": 0,
+    "second": 51,
+    "type": {
+      "id": 4,
+      "name": "Duel"
+    },
+    "possession": 2,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 9,
+      "name": "From Kick Off"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      111.9,
+      47.9
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "46e8af19-5ad8-4c04-a7fe-69f71d40c31e"
+    ],
+    "duel": {
+      "type": {
+        "id": 10,
+        "name": "Aerial Lost"
+      }
+    }
+  },
+  {
+    "id": "aefd53ff-205a-45d3-a6f1-6ed0950e0673",
+    "index": 59,
+    "period": 1,
+    "timestamp": "00:00:52.413",
+    "minute": 0,
+    "second": 52,
+    "type": {
+      "id": 4,
+      "name": "Duel"
+    },
+    "possession": 2,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 9,
+      "name": "From Kick Off"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 3625,
+      "name": "Sofiane Boufal"
+    },
+    "position": {
+      "id": 21,
+      "name": "Left Wing"
+    },
+    "location": [
+      113.5,
+      37.6
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "63d6f316-8d00-441d-8229-92901d882c31"
+    ],
+    "duel": {
+      "type": {
+        "id": 10,
+        "name": "Aerial Lost"
+      }
+    }
+  },
+  {
+    "id": "2e89e948-1c8c-466f-8c04-4ef83cc04e7e",
+    "index": 71,
+    "period": 1,
+    "timestamp": "00:01:41.040",
+    "minute": 1,
+    "second": 41,
+    "type": {
+      "id": 42,
+      "name": "Ball Receipt*"
+    },
+    "possession": 5,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      78.3,
+      35.2
+    ],
+    "related_events": [
+      "6c12de92-6d06-46da-bdb2-3fe0ede357ab"
+    ]
+  },
+  {
+    "id": "1c8c4279-504a-43e3-ab9d-3efde230ef55",
+    "index": 72,
+    "period": 1,
+    "timestamp": "00:01:41.040",
+    "minute": 1,
+    "second": 41,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 5,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      78.3,
+      35.2
+    ],
+    "duration": 0.970074,
+    "under_pressure": true,
+    "related_events": [
+      "2cb47b8e-cf35-49c0-8e3d-670ad38096a5",
+      "82421f5a-6591-4767-8550-6d9a710d1a6e",
+      "2e89e948-1c8c-466f-8c04-4ef83cc04e7e"
+    ],
+    "carry": {
+      "end_location": [
+        75.2,
+        34.4
+      ]
+    }
+  },
+  {
+    "id": "82421f5a-6591-4767-8550-6d9a710d1a6e",
+    "index": 74,
+    "period": 1,
+    "timestamp": "00:01:42.010",
+    "minute": 1,
+    "second": 42,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 5,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      75.2,
+      34.4
+    ],
+    "duration": 0.538828,
+    "under_pressure": true,
+    "related_events": [
+      "2cb47b8e-cf35-49c0-8e3d-670ad38096a5",
+      "c94e00e0-e6bb-457f-abc9-cd385171f2dd"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 5234,
+        "name": "Sofyan Amrabat"
+      },
+      "length": 8.856636,
+      "angle": 2.6981444,
+      "height": {
+        "id": 2,
+        "name": "Low Pass"
+      },
+      "end_location": [
+        67.2,
+        38.2
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "9aee6c3d-786a-4be5-b554-a34b4341630e",
+    "index": 98,
+    "period": 1,
+    "timestamp": "00:02:05.809",
+    "minute": 2,
+    "second": 5,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 6,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      23.4,
+      39.4
+    ],
+    "duration": 0.119998,
+    "related_events": [
+      "2aeb026c-2815-4f8d-93b5-970f70e6378c",
+      "473df22f-d159-4416-a5ce-62838698ea12"
+    ]
+  },
+  {
+    "id": "502d4934-a174-4282-9d6f-6549e1b3de2d",
+    "index": 195,
+    "period": 1,
+    "timestamp": "00:03:24.601",
+    "minute": 3,
+    "second": 24,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 8,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      87.9,
+      22.6
+    ],
+    "duration": 0.279999,
+    "related_events": [
+      "b86eecc4-65d5-42ac-babc-d3b1735324e3"
+    ]
+  },
+  {
+    "id": "32db35f6-4628-49d1-9843-269ba65a5f60",
+    "index": 197,
+    "period": 1,
+    "timestamp": "00:03:27.158",
+    "minute": 3,
+    "second": 27,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 8,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      99.3,
+      31.8
+    ],
+    "duration": 0.254752,
+    "related_events": [
+      "3f502b3f-8180-4dac-9aed-f694118eae31",
+      "7212d915-c8d3-4b23-9f72-f59951e797f8",
+      "d5844a38-ad20-463d-99c7-e259bd9b29c4"
+    ]
+  },
+  {
+    "id": "c954f54a-6eb6-49c8-9cf3-ce24bf789c86",
+    "index": 216,
+    "period": 1,
+    "timestamp": "00:04:59.257",
+    "minute": 4,
+    "second": 59,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 9,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 9,
+      "name": "From Kick Off"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      91.7,
+      34.2
+    ],
+    "duration": 0.326078,
+    "related_events": [
+      "afe42c77-31f0-4467-839d-9c00fb1c399a",
+      "e5d4f6ca-6c95-4d85-a08e-c1383b31a983"
+    ]
+  },
+  {
+    "id": "a2c00a6c-c77f-4caa-8b89-55005a37a076",
+    "index": 218,
+    "period": 1,
+    "timestamp": "00:04:59.600",
+    "minute": 4,
+    "second": 59,
+    "type": {
+      "id": 6,
+      "name": "Block"
+    },
+    "possession": 9,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 9,
+      "name": "From Kick Off"
+    },
+    "out": true,
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      91.2,
+      32.1
+    ],
+    "duration": 0.0,
+    "related_events": [
+      "e5d4f6ca-6c95-4d85-a08e-c1383b31a983"
+    ]
+  },
+  {
+    "id": "a0e57bb7-3e02-4c18-bbb1-291c0f5a5dc3",
+    "index": 267,
+    "period": 1,
+    "timestamp": "00:06:19.554",
+    "minute": 6,
+    "second": 19,
+    "type": {
+      "id": 4,
+      "name": "Duel"
+    },
+    "possession": 13,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 3625,
+      "name": "Sofiane Boufal"
+    },
+    "position": {
+      "id": 21,
+      "name": "Left Wing"
+    },
+    "location": [
+      74.4,
+      2.8
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "1495d98a-78e2-47b6-8741-870d1dfb16d7"
+    ],
+    "duel": {
+      "type": {
+        "id": 11,
+        "name": "Tackle"
+      },
+      "outcome": {
+        "id": 14,
+        "name": "Lost Out"
+      }
+    }
+  },
+  {
+    "id": "e1655433-3808-4c44-bddb-2723cb85597b",
+    "index": 278,
+    "period": 1,
+    "timestamp": "00:06:34.617",
+    "minute": 6,
+    "second": 34,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 14,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      98.4,
+      11.0
+    ],
+    "duration": 0.433211,
+    "related_events": [
+      "f2391f15-8150-4427-bbb1-06bdfd6dd1d1",
+      "abbda67c-dcb7-432e-82d0-a343076f0d26"
+    ]
+  },
+  {
+    "id": "31c016ab-9807-4bc6-b420-5ea996cd303f",
+    "index": 310,
+    "period": 1,
+    "timestamp": "00:09:36.915",
+    "minute": 9,
+    "second": 36,
+    "type": {
+      "id": 10,
+      "name": "Interception"
+    },
+    "possession": 19,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 3625,
+      "name": "Sofiane Boufal"
+    },
+    "position": {
+      "id": 21,
+      "name": "Left Wing"
+    },
+    "location": [
+      86.1,
+      5.1
+    ],
+    "duration": 0.0,
+    "related_events": [
+      "b313d941-21cb-4e20-b935-0bd996603db7"
+    ],
+    "interception": {
+      "outcome": {
+        "id": 4,
+        "name": "Won"
+      }
+    }
+  },
+  {
+    "id": "f1f79c89-6a62-4b9a-bb13-eeb9b58ee21b",
+    "index": 418,
+    "period": 1,
+    "timestamp": "00:12:38.252",
+    "minute": 12,
+    "second": 38,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 26,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      57.9,
+      26.9
+    ],
+    "duration": 0.040000003,
+    "related_events": [
+      "8c48956c-2c56-4887-bfcb-111a15a2c965",
+      "56d04cb4-8647-4242-870b-ddfd465a9ced"
+    ],
+    "carry": {
+      "end_location": [
+        57.9,
+        26.9
+      ]
+    }
+  },
+  {
+    "id": "8c48956c-2c56-4887-bfcb-111a15a2c965",
+    "index": 419,
+    "period": 1,
+    "timestamp": "00:12:38.292",
+    "minute": 12,
+    "second": 38,
+    "type": {
+      "id": 38,
+      "name": "Miscontrol"
+    },
+    "possession": 26,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      57.9,
+      26.9
+    ],
+    "duration": 0.0
+  },
+  {
+    "id": "c92d828e-fafb-4ed1-9b95-506707ce0191",
+    "index": 446,
+    "period": 1,
+    "timestamp": "00:13:09.566",
+    "minute": 13,
+    "second": 9,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 28,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      68.5,
+      31.4
+    ],
+    "duration": 0.07029,
+    "related_events": [
+      "dda94e3c-ac51-4c13-85a0-2a5b8c6bc300",
+      "e9997aed-8913-47b1-b153-ecafc7135a47"
+    ],
+    "carry": {
+      "end_location": [
+        68.5,
+        31.4
+      ]
+    }
+  },
+  {
+    "id": "dda94e3c-ac51-4c13-85a0-2a5b8c6bc300",
+    "index": 447,
+    "period": 1,
+    "timestamp": "00:13:09.636",
+    "minute": 13,
+    "second": 9,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 28,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      68.5,
+      31.4
+    ],
+    "duration": 0.778314,
+    "related_events": [
+      "f544c313-ad0b-4a73-9140-3304f64f79fd"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 46258,
+        "name": "Azzedine Ounahi"
+      },
+      "length": 7.1386275,
+      "angle": -2.9441972,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        61.5,
+        30.0
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "23bda9a5-8069-4a2b-8f5b-aaa376b22743",
+    "index": 545,
+    "period": 1,
+    "timestamp": "00:15:54.310",
+    "minute": 15,
+    "second": 54,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 32,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      74.0,
+      30.0
+    ],
+    "duration": 0.623246,
+    "related_events": [
+      "4ca498fd-4998-403c-a0fa-4e1a5364cf88",
+      "bbccd1ce-02a8-44fc-9563-016a11f0125e"
+    ]
+  },
+  {
+    "id": "d6296071-b30f-45b7-9592-57c7c6338451",
+    "index": 727,
+    "period": 1,
+    "timestamp": "00:19:25.298",
+    "minute": 19,
+    "second": 25,
+    "type": {
+      "id": 4,
+      "name": "Duel"
+    },
+    "possession": 36,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 3625,
+      "name": "Sofiane Boufal"
+    },
+    "position": {
+      "id": 21,
+      "name": "Left Wing"
+    },
+    "location": [
+      56.9,
+      6.8
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "b5a8543c-3c96-4799-a22d-eaed4409d063"
+    ],
+    "duel": {
+      "type": {
+        "id": 10,
+        "name": "Aerial Lost"
+      }
+    }
+  },
+  {
+    "id": "8122b74a-23f6-48ba-ac12-9626e1e98a4f",
+    "index": 748,
+    "period": 1,
+    "timestamp": "00:20:29.208",
+    "minute": 20,
+    "second": 29,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 38,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      34.7,
+      70.4
+    ],
+    "duration": 0.040000003,
+    "under_pressure": true,
+    "related_events": [
+      "c2c15b55-9f61-481a-bbeb-9204e126fddf",
+      "14a223bf-1fa1-49c3-819c-ad14275a1eb4",
+      "4f5bcedd-ac8b-4ed6-9ea2-cc32e99bb9db"
+    ],
+    "carry": {
+      "end_location": [
+        34.8,
+        70.4
+      ]
+    }
+  },
+  {
+    "id": "14a223bf-1fa1-49c3-819c-ad14275a1eb4",
+    "index": 749,
+    "period": 1,
+    "timestamp": "00:20:29.248",
+    "minute": 20,
+    "second": 29,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 38,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      34.8,
+      70.4
+    ],
+    "duration": 2.80342,
+    "related_events": [
+      "edab0367-e05a-4145-873c-a693e7122938"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 15890,
+        "name": "Noussair Mazraoui"
+      },
+      "length": 40.400124,
+      "angle": -1.5732715,
+      "height": {
+        "id": 2,
+        "name": "Low Pass"
+      },
+      "end_location": [
+        34.7,
+        30.0
+      ],
+      "switch": true,
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "a55c8d9a-8441-41b9-bec2-fc681eab3f67",
+    "index": 843,
+    "period": 1,
+    "timestamp": "00:22:35.188",
+    "minute": 22,
+    "second": 35,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 40,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      97.9,
+      56.4
+    ],
+    "duration": 1.196685,
+    "under_pressure": true,
+    "related_events": [
+      "0ab0c4ac-7806-497e-a42f-ee0fc7f3c97d",
+      "d15afe08-4cd1-4f32-9cfd-f21a5161cd92",
+      "fa3e211a-da39-4edb-af18-f1c34dd09874",
+      "662c7b27-09da-478e-828c-0fcc46892f04"
+    ],
+    "carry": {
+      "end_location": [
+        107.6,
+        53.2
+      ]
+    }
+  },
+  {
+    "id": "fa3e211a-da39-4edb-af18-f1c34dd09874",
+    "index": 845,
+    "period": 1,
+    "timestamp": "00:22:36.384",
+    "minute": 22,
+    "second": 36,
+    "type": {
+      "id": 16,
+      "name": "Shot"
+    },
+    "possession": 40,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      107.6,
+      53.2
+    ],
+    "duration": 0.567949,
+    "related_events": [
+      "30194064-df1b-48fa-b709-1701da40a6b1"
+    ],
+    "shot": {
+      "one_on_one": true,
+      "statsbomb_xg": 0.10405799,
+      "end_location": [
+        120.0,
+        42.6,
+        0.2
+      ],
+      "key_pass_id": "622ca669-ed29-4378-a64e-ba26fd45e8f0",
+      "technique": {
+        "id": 91,
+        "name": "Half Volley"
+      },
+      "body_part": {
+        "id": 40,
+        "name": "Right Foot"
+      },
+      "type": {
+        "id": 87,
+        "name": "Open Play"
+      },
+      "outcome": {
+        "id": 97,
+        "name": "Goal"
+      },
+      "freeze_frame": [
+        {
+          "location": [
+            106.9,
+            52.5
+          ],
+          "player": {
+            "id": 11846,
+            "name": "Steven de Sousa Vitoria"
+          },
+          "position": {
+            "id": 3,
+            "name": "Right Center Back"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            91.3,
+            29.7
+          ],
+          "player": {
+            "id": 44703,
+            "name": "Alistair Johnston"
+          },
+          "position": {
+            "id": 2,
+            "name": "Right Back"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            105.1,
+            51.9
+          ],
+          "player": {
+            "id": 23828,
+            "name": "Kamal Miller"
+          },
+          "position": {
+            "id": 5,
+            "name": "Left Center Back"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            117.0,
+            43.7
+          ],
+          "player": {
+            "id": 15958,
+            "name": "Milan Borjan"
+          },
+          "position": {
+            "id": 1,
+            "name": "Goalkeeper"
+          },
+          "teammate": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "e9e11533-0b60-468d-9a69-fb603efe3039",
+    "index": 917,
+    "period": 1,
+    "timestamp": "00:25:30.903",
+    "minute": 25,
+    "second": 30,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 43,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      27.7,
+      41.3
+    ],
+    "duration": 2.104879,
+    "under_pressure": true,
+    "related_events": [
+      "9506758e-faa9-4edd-9a22-2fac26bcbf8e",
+      "cf62820d-aa36-4b6f-a7ff-0e073f067cf9"
+    ],
+    "pass": {
+      "length": 16.260689,
+      "angle": 0.8768455,
+      "height": {
+        "id": 2,
+        "name": "Low Pass"
+      },
+      "end_location": [
+        38.1,
+        53.8
+      ],
+      "aerial_won": true,
+      "type": {
+        "id": 66,
+        "name": "Recovery"
+      },
+      "outcome": {
+        "id": 9,
+        "name": "Incomplete"
+      }
+    }
+  },
+  {
+    "id": "57a8a7a0-bc75-4246-9c43-f6f2c9608cea",
+    "index": 926,
+    "period": 1,
+    "timestamp": "00:25:38.577",
+    "minute": 25,
+    "second": 38,
+    "type": {
+      "id": 4,
+      "name": "Duel"
+    },
+    "possession": 44,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 3625,
+      "name": "Sofiane Boufal"
+    },
+    "position": {
+      "id": 21,
+      "name": "Left Wing"
+    },
+    "location": [
+      26.2,
+      19.5
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "counterpress": true,
+    "related_events": [
+      "4f0cf6ad-f740-4cd9-9c68-ff09a8706e8f"
+    ],
+    "duel": {
+      "outcome": {
+        "id": 16,
+        "name": "Success In Play"
+      },
+      "type": {
+        "id": 11,
+        "name": "Tackle"
+      }
+    }
+  },
+  {
+    "id": "41ff0ca0-f2da-4056-8b8f-9960b474ae60",
+    "index": 935,
+    "period": 1,
+    "timestamp": "00:26:33.445",
+    "minute": 26,
+    "second": 33,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 45,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      70.0,
+      25.5
+    ],
+    "duration": 0.007901,
+    "under_pressure": true,
+    "related_events": [
+      "312159bc-6a85-4a03-9fac-d129d4b765d8",
+      "34316dde-151e-4da6-8893-aa468ae90e70"
+    ],
+    "pass": {
+      "length": 2.1587033,
+      "angle": -0.23374318,
+      "height": {
+        "id": 2,
+        "name": "Low Pass"
+      },
+      "end_location": [
+        72.1,
+        25.0
+      ],
+      "outcome": {
+        "id": 9,
+        "name": "Incomplete"
+      },
+      "aerial_won": true
+    }
+  },
+  {
+    "id": "4fdfc73c-5199-42ed-9e90-956117237ad9",
+    "index": 967,
+    "period": 1,
+    "timestamp": "00:27:01.511",
+    "minute": 27,
+    "second": 1,
+    "type": {
+      "id": 4,
+      "name": "Duel"
+    },
+    "possession": 47,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 3625,
+      "name": "Sofiane Boufal"
+    },
+    "position": {
+      "id": 21,
+      "name": "Left Wing"
+    },
+    "location": [
+      29.8,
+      4.0
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "c7752593-e525-4d24-a9b4-0fb29d269f9a"
+    ],
+    "duel": {
+      "type": {
+        "id": 11,
+        "name": "Tackle"
+      },
+      "outcome": {
+        "id": 4,
+        "name": "Won"
+      }
+    }
+  },
+  {
+    "id": "5316c724-e1ba-483c-be34-5a230c1fb993",
+    "index": 1233,
+    "period": 1,
+    "timestamp": "00:35:32.939",
+    "minute": 35,
+    "second": 32,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 60,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      67.8,
+      23.4
+    ],
+    "duration": 0.45726,
+    "counterpress": true,
+    "related_events": [
+      "bdfae022-70c2-481d-ba19-15d5ca11e36b"
+    ]
+  },
+  {
+    "id": "6414b619-775d-422c-a87c-dd1da3c1a05a",
+    "index": 1235,
+    "period": 1,
+    "timestamp": "00:35:33.659",
+    "minute": 35,
+    "second": 33,
+    "type": {
+      "id": 4,
+      "name": "Duel"
+    },
+    "possession": 60,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      64.3,
+      21.7
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "counterpress": true,
+    "related_events": [
+      "f8b9e829-e27d-486c-8b85-eb713f9fee2a"
+    ],
+    "duel": {
+      "type": {
+        "id": 11,
+        "name": "Tackle"
+      },
+      "outcome": {
+        "id": 13,
+        "name": "Lost In Play"
+      }
+    }
+  },
+  {
+    "id": "4db70abd-0c59-40ee-9cfe-c7a9d44a089c",
+    "index": 1321,
+    "period": 1,
+    "timestamp": "00:37:23.560",
+    "minute": 37,
+    "second": 23,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 64,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      77.3,
+      21.6
+    ],
+    "duration": 0.505534,
+    "related_events": [
+      "7e40fc65-278e-48d9-a591-aa1181572d29",
+      "ca0d05a0-a53c-475f-886f-99f7321dfcca"
+    ]
+  },
+  {
+    "id": "89032544-c2d2-456d-976b-c708fb9a6a99",
+    "index": 1365,
+    "period": 1,
+    "timestamp": "00:38:07.537",
+    "minute": 38,
+    "second": 7,
+    "type": {
+      "id": 21,
+      "name": "Foul Won"
+    },
+    "possession": 65,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      45.4,
+      55.7
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "7fca4621-d924-4a4d-8700-a9bb439480cd"
+    ],
+    "foul_won": {
+      "defensive": true
+    }
+  },
+  {
+    "id": "5d944961-8eb4-4ccc-ae7b-298832953d25",
+    "index": 1405,
+    "period": 1,
+    "timestamp": "00:38:59.681",
+    "minute": 38,
+    "second": 59,
+    "type": {
+      "id": 2,
+      "name": "Ball Recovery"
+    },
+    "possession": 66,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      106.9,
+      13.0
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "19f8fa75-7c19-41fb-b9a9-f2baae7de5bc"
+    ]
+  },
+  {
+    "id": "bf0cd9c8-0152-49ce-b304-aa08fc069988",
+    "index": 1406,
+    "period": 1,
+    "timestamp": "00:38:59.681",
+    "minute": 38,
+    "second": 59,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 66,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      106.9,
+      13.0
+    ],
+    "duration": 1.610531,
+    "under_pressure": true,
+    "related_events": [
+      "19f8fa75-7c19-41fb-b9a9-f2baae7de5bc",
+      "f64531f0-6456-47e3-893c-172c8d59e8ad",
+      "5d944961-8eb4-4ccc-ae7b-298832953d25"
+    ],
+    "carry": {
+      "end_location": [
+        109.9,
+        12.2
+      ]
+    }
+  },
+  {
+    "id": "f64531f0-6456-47e3-893c-172c8d59e8ad",
+    "index": 1407,
+    "period": 1,
+    "timestamp": "00:39:01.291",
+    "minute": 39,
+    "second": 1,
+    "type": {
+      "id": 14,
+      "name": "Dribble"
+    },
+    "possession": 66,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      109.9,
+      12.2
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "19f8fa75-7c19-41fb-b9a9-f2baae7de5bc",
+      "26cb8fc9-7641-4f70-b5f6-0a6299c97483"
+    ],
+    "dribble": {
+      "outcome": {
+        "id": 9,
+        "name": "Incomplete"
+      }
+    }
+  },
+  {
+    "id": "05d78ab4-e676-4612-8bc6-983e7bebf927",
+    "index": 1449,
+    "period": 1,
+    "timestamp": "00:40:33.618",
+    "minute": 40,
+    "second": 33,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 68,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 9,
+      "name": "From Kick Off"
+    },
+    "off_camera": true,
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      61.0,
+      40.1
+    ],
+    "duration": 1.199999,
+    "related_events": [
+      "69f3114e-7119-4fcc-ad28-2a6141dd50e3"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 5237,
+        "name": "Hakim Ziyech"
+      },
+      "length": 47.336243,
+      "angle": 2.188099,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        33.6,
+        78.7
+      ],
+      "body_part": {
+        "id": 40,
+        "name": "Right Foot"
+      },
+      "type": {
+        "id": 65,
+        "name": "Kick Off"
+      }
+    }
+  },
+  {
+    "id": "77b07607-a10c-4b06-946e-067fc1d80abf",
+    "index": 1489,
+    "period": 1,
+    "timestamp": "00:42:49.915",
+    "minute": 42,
+    "second": 49,
+    "type": {
+      "id": 22,
+      "name": "Foul Committed"
+    },
+    "possession": 72,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      86.8,
+      10.3
+    ],
+    "duration": 0.0,
+    "related_events": [
+      "d6323e74-3dec-452a-8602-d015bcfdf58a"
+    ]
+  },
+  {
+    "id": "b9760415-0b2d-4eee-a5dd-d74c593a432a",
+    "index": 1513,
+    "period": 1,
+    "timestamp": "00:43:56.430",
+    "minute": 43,
+    "second": 56,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 74,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      57.2,
+      42.9
+    ],
+    "duration": 1.050401,
+    "related_events": [
+      "e17c0614-2633-44b7-ad40-0f2f8f9350d8"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 3634,
+        "name": "Abdelhamid Sabiri"
+      },
+      "length": 11.6297035,
+      "angle": -2.9425108,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        45.8,
+        40.6
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      },
+      "type": {
+        "id": 66,
+        "name": "Recovery"
+      }
+    }
+  },
+  {
+    "id": "cb136426-8cd4-476e-aad9-3ac89c9d8b10",
+    "index": 1531,
+    "period": 1,
+    "timestamp": "00:44:11.436",
+    "minute": 44,
+    "second": 11,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 75,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      83.0,
+      34.8
+    ],
+    "duration": 0.222905,
+    "related_events": [
+      "d49492f9-86d4-4e6b-acb7-d8f947758933",
+      "eeba3820-896f-4781-b1b7-e1001dfc13af"
+    ]
+  },
+  {
+    "id": "fd888c46-0092-4f36-9ba4-9d8d1a24a554",
+    "index": 1552,
+    "period": 1,
+    "timestamp": "00:44:55.461",
+    "minute": 44,
+    "second": 55,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 76,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      40.2,
+      3.9
+    ],
+    "duration": 1.366279,
+    "related_events": [
+      "12bcb125-f238-4015-bd5f-754ed0e9309d"
+    ],
+    "pass": {
+      "length": 23.791805,
+      "angle": 1.1090285,
+      "height": {
+        "id": 2,
+        "name": "Low Pass"
+      },
+      "end_location": [
+        50.8,
+        25.2
+      ],
+      "body_part": {
+        "id": 37,
+        "name": "Head"
+      },
+      "outcome": {
+        "id": 9,
+        "name": "Incomplete"
+      }
+    }
+  },
+  {
+    "id": "6cc07fe6-954d-4756-938a-ceb301bd425b",
+    "index": 1605,
+    "period": 1,
+    "timestamp": "00:46:01.593",
+    "minute": 46,
+    "second": 1,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 79,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      69.8,
+      74.0
+    ],
+    "duration": 0.799792,
+    "related_events": [
+      "2a3c59fd-1b71-4ef1-811f-7533b489c22c",
+      "1dfbb68e-826a-4abd-bf80-57a45b507258"
+    ],
+    "carry": {
+      "end_location": [
+        67.4,
+        73.0
+      ]
+    }
+  },
+  {
+    "id": "2a3c59fd-1b71-4ef1-811f-7533b489c22c",
+    "index": 1606,
+    "period": 1,
+    "timestamp": "00:46:02.392",
+    "minute": 46,
+    "second": 2,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 79,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      67.4,
+      73.0
+    ],
+    "duration": 3.979203,
+    "related_events": [
+      "0c19a3ca-fe29-4a18-a648-db99630945fb"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 15890,
+        "name": "Noussair Mazraoui"
+      },
+      "length": 52.509903,
+      "angle": -1.7102695,
+      "height": {
+        "id": 3,
+        "name": "High Pass"
+      },
+      "end_location": [
+        60.1,
+        21.0
+      ],
+      "switch": true,
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "ff20b05e-c4f0-4de9-91b0-942a796dbd6e",
+    "index": 1640,
+    "period": 1,
+    "timestamp": "00:47:17.909",
+    "minute": 47,
+    "second": 17,
+    "type": {
+      "id": 2,
+      "name": "Ball Recovery"
+    },
+    "possession": 80,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      106.9,
+      45.7
+    ],
+    "duration": 0.0
+  },
+  {
+    "id": "650fa4d8-6a8d-4340-a0e2-1268ca085d4b",
+    "index": 1641,
+    "period": 1,
+    "timestamp": "00:47:18.071",
+    "minute": 47,
+    "second": 18,
+    "type": {
+      "id": 16,
+      "name": "Shot"
+    },
+    "possession": 80,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      106.8,
+      46.7
+    ],
+    "duration": 0.384591,
+    "related_events": [
+      "a5680547-1685-48b8-9812-8b42cea50452"
+    ],
+    "shot": {
+      "statsbomb_xg": 0.094470315,
+      "end_location": [
+        116.7,
+        44.0
+      ],
+      "technique": {
+        "id": 95,
+        "name": "Volley"
+      },
+      "body_part": {
+        "id": 40,
+        "name": "Right Foot"
+      },
+      "type": {
+        "id": 87,
+        "name": "Open Play"
+      },
+      "outcome": {
+        "id": 101,
+        "name": "Wayward"
+      },
+      "first_time": true,
+      "freeze_frame": [
+        {
+          "location": [
+            105.1,
+            49.8
+          ],
+          "player": {
+            "id": 3634,
+            "name": "Abdelhamid Sabiri"
+          },
+          "position": {
+            "id": 15,
+            "name": "Left Center Midfield"
+          },
+          "teammate": true
+        },
+        {
+          "location": [
+            113.6,
+            47.8
+          ],
+          "player": {
+            "id": 5219,
+            "name": "Romain Saïss"
+          },
+          "position": {
+            "id": 5,
+            "name": "Left Center Back"
+          },
+          "teammate": true
+        },
+        {
+          "location": [
+            104.9,
+            32.5
+          ],
+          "player": {
+            "id": 3625,
+            "name": "Sofiane Boufal"
+          },
+          "position": {
+            "id": 21,
+            "name": "Left Wing"
+          },
+          "teammate": true
+        },
+        {
+          "location": [
+            116.8,
+            43.2
+          ],
+          "player": {
+            "id": 12149,
+            "name": "Nayef Aguerd"
+          },
+          "position": {
+            "id": 3,
+            "name": "Right Center Back"
+          },
+          "teammate": true
+        },
+        {
+          "location": [
+            115.0,
+            47.4
+          ],
+          "player": {
+            "id": 16459,
+            "name": "Cyle Larin"
+          },
+          "position": {
+            "id": 23,
+            "name": "Center Forward"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            100.4,
+            48.7
+          ],
+          "player": {
+            "id": 12365,
+            "name": "Alphonso Davies"
+          },
+          "position": {
+            "id": 19,
+            "name": "Center Attacking Midfield"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            109.1,
+            50.8
+          ],
+          "player": {
+            "id": 12770,
+            "name": "Jonathan Osorio"
+          },
+          "position": {
+            "id": 9,
+            "name": "Right Defensive Midfield"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            106.0,
+            42.4
+          ],
+          "player": {
+            "id": 23828,
+            "name": "Kamal Miller"
+          },
+          "position": {
+            "id": 5,
+            "name": "Left Center Back"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            108.9,
+            40.2
+          ],
+          "player": {
+            "id": 11846,
+            "name": "Steven de Sousa Vitoria"
+          },
+          "position": {
+            "id": 3,
+            "name": "Right Center Back"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            112.2,
+            44.1
+          ],
+          "player": {
+            "id": 16252,
+            "name": "Mark Anthony Kaye"
+          },
+          "position": {
+            "id": 11,
+            "name": "Left Defensive Midfield"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            112.1,
+            42.0
+          ],
+          "player": {
+            "id": 29758,
+            "name": "Sam Adekugbe"
+          },
+          "position": {
+            "id": 6,
+            "name": "Left Back"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            111.3,
+            37.0
+          ],
+          "player": {
+            "id": 44703,
+            "name": "Alistair Johnston"
+          },
+          "position": {
+            "id": 2,
+            "name": "Right Back"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            109.1,
+            30.2
+          ],
+          "player": {
+            "id": 9922,
+            "name": "David Junior Hoilett"
+          },
+          "position": {
+            "id": 12,
+            "name": "Right Midfield"
+          },
+          "teammate": false
+        },
+        {
+          "location": [
+            119.0,
+            42.1
+          ],
+          "player": {
+            "id": 15958,
+            "name": "Milan Borjan"
+          },
+          "position": {
+            "id": 1,
+            "name": "Goalkeeper"
+          },
+          "teammate": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "d511416f-ad8a-466c-8ad6-e7a3dc98e9fa",
+    "index": 1704,
+    "period": 1,
+    "timestamp": "00:49:52.720",
+    "minute": 49,
+    "second": 52,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 83,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 3625,
+      "name": "Sofiane Boufal"
+    },
+    "position": {
+      "id": 21,
+      "name": "Left Wing"
+    },
+    "location": [
+      75.7,
+      11.7
+    ],
+    "duration": 2.559577,
+    "under_pressure": true,
+    "related_events": [
+      "9a3bf854-3971-4faa-9493-e3b4b86241ac",
+      "37b8f924-bb3c-471a-9559-707dfe0fcd9a"
+    ],
+    "pass": {
+      "length": 19.200521,
+      "angle": 0.4240413,
+      "height": {
+        "id": 3,
+        "name": "High Pass"
+      },
+      "end_location": [
+        93.2,
+        19.6
+      ],
+      "aerial_won": true,
+      "outcome": {
+        "id": 9,
+        "name": "Incomplete"
+      }
+    }
+  },
+  {
+    "id": "95febbb2-7844-4a77-9055-de620100ee9f",
+    "index": 1707,
+    "period": 1,
+    "timestamp": "00:49:56.439",
+    "minute": 49,
+    "second": 56,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 84,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      92.0,
+      12.2
+    ],
+    "duration": 0.241564,
+    "counterpress": true,
+    "related_events": [
+      "6ded486f-b3cb-41a6-ac3d-e652c4da10fc",
+      "058b0b6a-0b63-4b01-ad44-0b4ed6db45ee"
+    ]
+  },
+  {
+    "id": "1890f908-ef96-47aa-a522-7fce1ba2d3cc",
+    "index": 1709,
+    "period": 1,
+    "timestamp": "00:49:56.761",
+    "minute": 49,
+    "second": 56,
+    "type": {
+      "id": 6,
+      "name": "Block"
+    },
+    "possession": 84,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "out": true,
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      91.8,
+      11.7
+    ],
+    "duration": 0.0,
+    "counterpress": true,
+    "related_events": [
+      "058b0b6a-0b63-4b01-ad44-0b4ed6db45ee"
+    ]
+  },
+  {
+    "id": "e9be0e2b-981d-4cdd-b09a-c366b26984c5",
+    "index": 1711,
+    "period": 1,
+    "timestamp": "00:50:05.922",
+    "minute": 50,
+    "second": 5,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 85,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "f1def825-c90f-42a5-94a4-008151b66766"
+    ]
+  },
+  {
+    "id": "f1def825-c90f-42a5-94a4-008151b66766",
+    "index": 1712,
+    "period": 1,
+    "timestamp": "00:50:05.922",
+    "minute": 50,
+    "second": 5,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 85,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "e9be0e2b-981d-4cdd-b09a-c366b26984c5"
+    ]
+  },
+  {
+    "id": "f2023e55-3c53-44be-9826-8aa0a0ac355f",
+    "index": 1713,
+    "period": 2,
+    "timestamp": "00:00:00.000",
+    "minute": 45,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 85,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "ffe7e95d-9ded-4ba0-9d8f-e8ca18513419"
+    ]
+  },
+  {
+    "id": "ffe7e95d-9ded-4ba0-9d8f-e8ca18513419",
+    "index": 1714,
+    "period": 2,
+    "timestamp": "00:00:00.000",
+    "minute": 45,
+    "second": 0,
+    "type": {
+      "id": 18,
+      "name": "Half Start"
+    },
+    "possession": 85,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "f2023e55-3c53-44be-9826-8aa0a0ac355f"
+    ]
+  },
+  {
+    "id": "8e068c04-f7b5-4e98-8ce9-21e3919ec7b7",
+    "index": 1748,
+    "period": 2,
+    "timestamp": "00:01:07.647",
+    "minute": 46,
+    "second": 7,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 88,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      76.9,
+      25.8
+    ],
+    "duration": 0.218761,
+    "related_events": [
+      "7c211d5e-7149-4fcb-aba5-7a5ae8bb2b61",
+      "de497cde-a66c-4866-8ba2-dd3ebba387a2"
+    ],
+    "carry": {
+      "end_location": [
+        75.6,
+        25.8
+      ]
+    }
+  },
+  {
+    "id": "7c211d5e-7149-4fcb-aba5-7a5ae8bb2b61",
+    "index": 1749,
+    "period": 2,
+    "timestamp": "00:01:07.866",
+    "minute": 46,
+    "second": 7,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 88,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      75.6,
+      25.8
+    ],
+    "duration": 0.646792,
+    "related_events": [
+      "2418cf17-eb7f-4d4a-98b0-be9dec953ab0"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 3625,
+        "name": "Sofiane Boufal"
+      },
+      "length": 5.3488317,
+      "angle": -2.7784457,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        70.6,
+        23.9
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "f90e0ba1-16ad-4306-82d8-cef7b79529ce",
+    "index": 1793,
+    "period": 2,
+    "timestamp": "00:01:56.020",
+    "minute": 46,
+    "second": 56,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 90,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      98.7,
+      56.8
+    ],
+    "duration": 5.719779,
+    "under_pressure": true,
+    "related_events": [
+      "1a97edc1-c224-4064-bd0b-64f685bd0f1a",
+      "f3651378-d896-4c6c-afb8-6911fab3dc8b",
+      "09149f60-2193-4a38-bdf7-b9769286baf4"
+    ],
+    "carry": {
+      "end_location": [
+        105.3,
+        76.3
+      ]
+    }
+  },
+  {
+    "id": "f3651378-d896-4c6c-afb8-6911fab3dc8b",
+    "index": 1794,
+    "period": 2,
+    "timestamp": "00:02:01.739",
+    "minute": 47,
+    "second": 1,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 90,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      105.3,
+      76.3
+    ],
+    "duration": 1.380757,
+    "related_events": [
+      "e340c6ee-23da-4120-94ae-dcf7f74cf8f8"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 5237,
+        "name": "Hakim Ziyech"
+      },
+      "length": 13.689412,
+      "angle": -2.704083,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        92.9,
+        70.5
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "a048cf53-7535-4255-8aa7-9b23723afda2",
+    "index": 2013,
+    "period": 2,
+    "timestamp": "00:05:25.139",
+    "minute": 50,
+    "second": 25,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 98,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      40.3,
+      36.7
+    ],
+    "duration": 0.04,
+    "related_events": [
+      "73fec1c9-246d-4f10-b488-3653627cbd13",
+      "19286cb0-4d4a-4697-baa1-9740f4f0130e"
+    ],
+    "carry": {
+      "end_location": [
+        40.3,
+        36.7
+      ]
+    }
+  },
+  {
+    "id": "73fec1c9-246d-4f10-b488-3653627cbd13",
+    "index": 2014,
+    "period": 2,
+    "timestamp": "00:05:25.179",
+    "minute": 50,
+    "second": 25,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 98,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      40.3,
+      36.7
+    ],
+    "duration": 1.380458,
+    "related_events": [
+      "adb595f5-0b14-4e2c-ad09-9e0aacc99459"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 5237,
+        "name": "Hakim Ziyech"
+      },
+      "length": 35.93466,
+      "angle": 1.354844,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        48.0,
+        71.8
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "35106ecd-1cab-4bb0-a516-f5036336c828",
+    "index": 2108,
+    "period": 2,
+    "timestamp": "00:07:10.174",
+    "minute": 52,
+    "second": 10,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 100,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      51.2,
+      29.9
+    ],
+    "duration": 0.850874,
+    "under_pressure": true,
+    "related_events": [
+      "22233d3f-0b01-4393-8b31-e854b2c53460",
+      "ebd65118-a439-4b48-8e95-042285db5d6a",
+      "bd5c6944-28ee-454a-ab0b-26f9241e7805"
+    ],
+    "carry": {
+      "end_location": [
+        48.2,
+        28.6
+      ]
+    }
+  },
+  {
+    "id": "ebd65118-a439-4b48-8e95-042285db5d6a",
+    "index": 2109,
+    "period": 2,
+    "timestamp": "00:07:11.025",
+    "minute": 52,
+    "second": 11,
+    "type": {
+      "id": 38,
+      "name": "Miscontrol"
+    },
+    "possession": 100,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      48.2,
+      28.6
+    ],
+    "duration": 0.0
+  },
+  {
+    "id": "48c12a55-40f3-489c-be87-a5ac5cb17196",
+    "index": 2145,
+    "period": 2,
+    "timestamp": "00:08:07.314",
+    "minute": 53,
+    "second": 7,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 103,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      42.8,
+      75.7
+    ],
+    "duration": 0.263801,
+    "under_pressure": true,
+    "related_events": [
+      "62d66a4f-f6ae-4357-99eb-4b6c526b06a6",
+      "8a7339a4-a695-46c8-b31a-1957fe58615a",
+      "4e3ed1f6-6860-48fe-bb18-aebd4399e0aa"
+    ],
+    "carry": {
+      "end_location": [
+        48.8,
+        72.4
+      ]
+    }
+  },
+  {
+    "id": "8a7339a4-a695-46c8-b31a-1957fe58615a",
+    "index": 2147,
+    "period": 2,
+    "timestamp": "00:08:07.578",
+    "minute": 53,
+    "second": 7,
+    "type": {
+      "id": 14,
+      "name": "Dribble"
+    },
+    "possession": 103,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      48.8,
+      72.4
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "65324489-89f8-43c5-88cd-fc873fb5ff20"
+    ],
+    "dribble": {
+      "no_touch": true,
+      "overrun": true,
+      "outcome": {
+        "id": 8,
+        "name": "Complete"
+      }
+    }
+  },
+  {
+    "id": "6c69d902-0023-48fb-b079-91a3ea154caa",
+    "index": 2148,
+    "period": 2,
+    "timestamp": "00:08:07.578",
+    "minute": 53,
+    "second": 7,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 103,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      48.8,
+      72.4
+    ],
+    "duration": 1.223763,
+    "under_pressure": true,
+    "related_events": [
+      "aae9515f-b546-4250-9142-2a68f9af9b57",
+      "65324489-89f8-43c5-88cd-fc873fb5ff20",
+      "07675803-1081-4c20-a91b-7870576a49ad",
+      "8a7339a4-a695-46c8-b31a-1957fe58615a"
+    ],
+    "carry": {
+      "end_location": [
+        52.9,
+        71.6
+      ]
+    }
+  },
+  {
+    "id": "5ccfd441-cc7c-4c84-9c8f-7372dede036b",
+    "index": 2261,
+    "period": 2,
+    "timestamp": "00:11:55.331",
+    "minute": 56,
+    "second": 55,
+    "type": {
+      "id": 3,
+      "name": "Dispossessed"
+    },
+    "possession": 108,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 3625,
+      "name": "Sofiane Boufal"
+    },
+    "position": {
+      "id": 21,
+      "name": "Left Wing"
+    },
+    "location": [
+      80.3,
+      46.3
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "2a28a794-bae5-4368-8596-884bcfc397aa",
+      "9f640871-fdcb-4d21-a394-a7a79c891dc4"
+    ]
+  },
+  {
+    "id": "3831a6e4-b77f-44d4-848e-a80442bc9773",
+    "index": 2375,
+    "period": 2,
+    "timestamp": "00:15:52.037",
+    "minute": 60,
+    "second": 52,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 114,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 5,
+      "name": "Other"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      95.5,
+      50.8
+    ],
+    "duration": 0.04,
+    "related_events": [
+      "59846e8b-a1c4-428f-bba2-88e7e8a6c7de",
+      "bfa759b4-d289-436d-b554-9699374e3e9a"
+    ],
+    "carry": {
+      "end_location": [
+        95.5,
+        50.8
+      ]
+    }
+  },
+  {
+    "id": "59846e8b-a1c4-428f-bba2-88e7e8a6c7de",
+    "index": 2376,
+    "period": 2,
+    "timestamp": "00:15:52.077",
+    "minute": 60,
+    "second": 52,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 114,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 5,
+      "name": "Other"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      95.5,
+      50.8
+    ],
+    "duration": 1.503799,
+    "related_events": [
+      "99c1c751-4abb-45b2-befe-aca548295ce8",
+      "99e9ee85-7492-4e3e-9f19-8dbc6106451f"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 46258,
+        "name": "Azzedine Ounahi"
+      },
+      "length": 11.112605,
+      "angle": 1.297441,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        98.5,
+        61.5
+      ],
+      "outcome": {
+        "id": 9,
+        "name": "Incomplete"
+      },
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "148c77f8-44b5-4f3c-9582-d1213decc39d",
+    "index": 2410,
+    "period": 2,
+    "timestamp": "00:16:32.286",
+    "minute": 61,
+    "second": 32,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 116,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      65.5,
+      66.5
+    ],
+    "duration": 0.040000003,
+    "related_events": [
+      "182ca55b-8e61-4359-ac33-8177dcd0c6ef",
+      "e19f86db-a69a-4309-8a2e-c64060e7eb2e"
+    ],
+    "carry": {
+      "end_location": [
+        65.5,
+        66.5
+      ]
+    }
+  },
+  {
+    "id": "182ca55b-8e61-4359-ac33-8177dcd0c6ef",
+    "index": 2411,
+    "period": 2,
+    "timestamp": "00:16:32.326",
+    "minute": 61,
+    "second": 32,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 116,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      65.5,
+      66.5
+    ],
+    "duration": 2.162417,
+    "related_events": [
+      "d65a7aae-1820-4529-a83c-bfbeee2761e0"
+    ],
+    "pass": {
+      "length": 38.031567,
+      "angle": -1.8259788,
+      "height": {
+        "id": 2,
+        "name": "Low Pass"
+      },
+      "end_location": [
+        55.9,
+        29.7
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      },
+      "outcome": {
+        "id": 9,
+        "name": "Incomplete"
+      }
+    }
+  },
+  {
+    "id": "357d6a23-b905-4864-8cd2-02a68742e949",
+    "index": 2497,
+    "period": 2,
+    "timestamp": "00:17:55.871",
+    "minute": 62,
+    "second": 55,
+    "type": {
+      "id": 2,
+      "name": "Ball Recovery"
+    },
+    "possession": 117,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      12.0,
+      69.0
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "06e358d1-b342-4de7-88b3-3a25c088b187"
+    ]
+  },
+  {
+    "id": "c9294064-275a-4a24-830f-08aeca8f3014",
+    "index": 2498,
+    "period": 2,
+    "timestamp": "00:17:55.871",
+    "minute": 62,
+    "second": 55,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 117,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      12.0,
+      69.0
+    ],
+    "duration": 1.324078,
+    "under_pressure": true,
+    "related_events": [
+      "06e358d1-b342-4de7-88b3-3a25c088b187",
+      "8e238496-2c0a-45c8-ae14-0cb4f3833797",
+      "357d6a23-b905-4864-8cd2-02a68742e949"
+    ],
+    "carry": {
+      "end_location": [
+        7.5,
+        67.7
+      ]
+    }
+  },
+  {
+    "id": "8e238496-2c0a-45c8-ae14-0cb4f3833797",
+    "index": 2499,
+    "period": 2,
+    "timestamp": "00:17:57.195",
+    "minute": 62,
+    "second": 57,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 117,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      7.5,
+      67.7
+    ],
+    "duration": 0.434214,
+    "related_events": [
+      "58696c26-327f-4081-a60a-397101e13677"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 5245,
+        "name": "Achraf Hakimi Mouh"
+      },
+      "length": 4.4598207,
+      "angle": -1.9138203,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        6.0,
+        63.5
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "38385cf9-dc14-4bde-a017-afa4104cd051",
+    "index": 2620,
+    "period": 2,
+    "timestamp": "00:21:43.737",
+    "minute": 66,
+    "second": 43,
+    "type": {
+      "id": 4,
+      "name": "Duel"
+    },
+    "possession": 121,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      81.6,
+      74.2
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "5d3426f2-5170-417c-b1b9-13850c32dda6"
+    ],
+    "duel": {
+      "type": {
+        "id": 10,
+        "name": "Aerial Lost"
+      }
+    }
+  },
+  {
+    "id": "b773e335-15d8-431f-9e76-ea21eff86b2e",
+    "index": 2749,
+    "period": 2,
+    "timestamp": "00:26:55.292",
+    "minute": 71,
+    "second": 55,
+    "type": {
+      "id": 4,
+      "name": "Duel"
+    },
+    "possession": 127,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 7,
+      "name": "From Goal Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      70.6,
+      4.9
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "4ea2fc77-fa89-4072-bb2b-726aef510845"
+    ],
+    "duel": {
+      "type": {
+        "id": 10,
+        "name": "Aerial Lost"
+      }
+    }
+  },
+  {
+    "id": "850f2717-5a6a-4fa1-b274-63dec6a494ef",
+    "index": 2769,
+    "period": 2,
+    "timestamp": "00:27:33.142",
+    "minute": 72,
+    "second": 33,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 129,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      41.6,
+      74.4
+    ],
+    "duration": 0.111939,
+    "related_events": [
+      "d10c9754-ad60-43ee-80a5-51cad2f8189a",
+      "70bc257e-7e6f-4b3d-a436-e40e31019ccf"
+    ],
+    "carry": {
+      "end_location": [
+        41.1,
+        74.6
+      ]
+    }
+  },
+  {
+    "id": "d10c9754-ad60-43ee-80a5-51cad2f8189a",
+    "index": 2770,
+    "period": 2,
+    "timestamp": "00:27:33.254",
+    "minute": 72,
+    "second": 33,
+    "type": {
+      "id": 38,
+      "name": "Miscontrol"
+    },
+    "possession": 129,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      41.1,
+      74.6
+    ],
+    "duration": 0.0
+  },
+  {
+    "id": "2dfd3528-f8bd-4996-ada0-ec2845a08114",
+    "index": 2771,
+    "period": 2,
+    "timestamp": "00:27:33.807",
+    "minute": 72,
+    "second": 33,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 129,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      39.4,
+      72.0
+    ],
+    "duration": 0.465814,
+    "related_events": [
+      "8e084154-bc83-4a28-b3b2-ba6cd3fde416"
+    ]
+  },
+  {
+    "id": "a3b54607-63ab-4acc-8f7b-783c6d6f4d76",
+    "index": 2776,
+    "period": 2,
+    "timestamp": "00:27:36.891",
+    "minute": 72,
+    "second": 36,
+    "type": {
+      "id": 9,
+      "name": "Clearance"
+    },
+    "possession": 129,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      32.8,
+      71.4
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "clearance": {
+      "head": true,
+      "body_part": {
+        "id": 37,
+        "name": "Head"
+      }
+    }
+  },
+  {
+    "id": "f0951f54-5715-4625-b972-4debbf58458d",
+    "index": 2808,
+    "period": 2,
+    "timestamp": "00:28:46.560",
+    "minute": 73,
+    "second": 46,
+    "type": {
+      "id": 9,
+      "name": "Clearance"
+    },
+    "possession": 131,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 2,
+      "name": "From Corner"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      5.2,
+      32.7
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "ee6a0215-7900-4500-b528-c0a5aa1b90e3"
+    ],
+    "clearance": {
+      "head": true,
+      "body_part": {
+        "id": 37,
+        "name": "Head"
+      }
+    }
+  },
+  {
+    "id": "4e777a07-040b-43d5-8dcb-1135b5791ea7",
+    "index": 2827,
+    "period": 2,
+    "timestamp": "00:29:32.103",
+    "minute": 74,
+    "second": 32,
+    "type": {
+      "id": 9,
+      "name": "Clearance"
+    },
+    "possession": 132,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 2,
+      "name": "From Corner"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 23,
+      "name": "Center Forward"
+    },
+    "location": [
+      3.9,
+      31.9
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "755de337-a40c-4328-a913-9db874b760ca",
+      "1091c1d1-80dd-4a8f-adab-ea903c8d94fb"
+    ],
+    "clearance": {
+      "aerial_won": true,
+      "head": true,
+      "body_part": {
+        "id": 37,
+        "name": "Head"
+      }
+    }
+  },
+  {
+    "id": "66204953-efa5-481b-9c30-c85b9a929b15",
+    "index": 2906,
+    "period": 2,
+    "timestamp": "00:32:16.932",
+    "minute": 77,
+    "second": 16,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 136,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      42.0,
+      70.3
+    ],
+    "duration": 0.159998
+  },
+  {
+    "id": "0fd4f6b3-6d83-4a5b-8bb6-46ad3f06d381",
+    "index": 2925,
+    "period": 2,
+    "timestamp": "00:32:38.519",
+    "minute": 77,
+    "second": 38,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 136,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      50.3,
+      57.0
+    ],
+    "duration": 0.488844,
+    "related_events": [
+      "1ff2951e-d194-4904-a78c-f46cd5a1b281"
+    ]
+  },
+  {
+    "id": "e5128e07-6fdb-45b5-9a94-0707762170b1",
+    "index": 3064,
+    "period": 2,
+    "timestamp": "00:37:56.680",
+    "minute": 82,
+    "second": 56,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 148,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      46.9,
+      67.7
+    ],
+    "duration": 1.173281,
+    "related_events": [
+      "8dbd044d-6cc4-4155-92ac-437d4f7aa2fa",
+      "c3bbb610-544f-46a3-bae9-4f0640e2e4bc"
+    ]
+  },
+  {
+    "id": "821acbc7-108e-4259-9d32-3a89d604f978",
+    "index": 3168,
+    "period": 2,
+    "timestamp": "00:42:52.667",
+    "minute": 87,
+    "second": 52,
+    "type": {
+      "id": 2,
+      "name": "Ball Recovery"
+    },
+    "possession": 156,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      34.3,
+      55.8
+    ],
+    "duration": 0.0
+  },
+  {
+    "id": "4db07288-4e31-49d9-981b-e744e7b8d5ed",
+    "index": 3169,
+    "period": 2,
+    "timestamp": "00:42:52.667",
+    "minute": 87,
+    "second": 52,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 156,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      34.3,
+      55.8
+    ],
+    "duration": 1.047583,
+    "under_pressure": true,
+    "related_events": [
+      "14a83b18-da3e-4071-a0a0-200ad4d6e975",
+      "4e1c8e3e-bc75-4ce6-8651-903b4001600e",
+      "821acbc7-108e-4259-9d32-3a89d604f978"
+    ],
+    "carry": {
+      "end_location": [
+        38.6,
+        56.2
+      ]
+    }
+  },
+  {
+    "id": "4e1c8e3e-bc75-4ce6-8651-903b4001600e",
+    "index": 3172,
+    "period": 2,
+    "timestamp": "00:42:53.714",
+    "minute": 87,
+    "second": 53,
+    "type": {
+      "id": 21,
+      "name": "Foul Won"
+    },
+    "possession": 156,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      38.6,
+      56.2
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "baca57aa-bb0f-4fa8-9555-dda174bb1cf2"
+    ]
+  },
+  {
+    "id": "6c02fba6-845f-40ee-bd3c-8fbd87b27cdd",
+    "index": 3225,
+    "period": 2,
+    "timestamp": "00:44:21.925",
+    "minute": 89,
+    "second": 21,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 160,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      63.2,
+      68.8
+    ],
+    "duration": 2.277279,
+    "under_pressure": true,
+    "related_events": [
+      "551c3b94-0000-4089-a285-91759929caea",
+      "4f45d6fc-d3a7-4c18-aa43-652add2e4da6",
+      "8473633e-b3fc-430b-bd6d-bb14cb4dfef1"
+    ],
+    "carry": {
+      "end_location": [
+        79.0,
+        75.4
+      ]
+    }
+  },
+  {
+    "id": "4f45d6fc-d3a7-4c18-aa43-652add2e4da6",
+    "index": 3227,
+    "period": 2,
+    "timestamp": "00:44:24.202",
+    "minute": 89,
+    "second": 24,
+    "type": {
+      "id": 14,
+      "name": "Dribble"
+    },
+    "possession": 160,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      79.0,
+      75.4
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "c432a85d-a7b9-431c-b1e8-4319225ff233"
+    ],
+    "dribble": {
+      "outcome": {
+        "id": 9,
+        "name": "Incomplete"
+      }
+    }
+  },
+  {
+    "id": "e4883aff-579f-4ddf-90b1-9b2901bc10be",
+    "index": 3296,
+    "period": 2,
+    "timestamp": "00:45:44.269",
+    "minute": 90,
+    "second": 44,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 162,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      5.0,
+      65.2
+    ],
+    "duration": 1.343776,
+    "related_events": [
+      "17898c76-4093-408f-bad8-932be481b329"
+    ]
+  },
+  {
+    "id": "49206b91-66a2-4b55-8b46-368a6a6fd765",
+    "index": 3311,
+    "period": 2,
+    "timestamp": "00:45:52.401",
+    "minute": 90,
+    "second": 52,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 162,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 3,
+      "name": "From Free Kick"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      7.8,
+      69.0
+    ],
+    "duration": 2.356914,
+    "pass": {
+      "length": 43.053688,
+      "angle": 0.23202164,
+      "height": {
+        "id": 3,
+        "name": "High Pass"
+      },
+      "end_location": [
+        49.7,
+        78.9
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      },
+      "outcome": {
+        "id": 75,
+        "name": "Out"
+      }
+    }
+  },
+  {
+    "id": "9302336e-8d37-4412-ae28-3b055826331a",
+    "index": 3324,
+    "period": 2,
+    "timestamp": "00:46:12.167",
+    "minute": 91,
+    "second": 12,
+    "type": {
+      "id": 17,
+      "name": "Pressure"
+    },
+    "possession": 163,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      10.8,
+      69.9
+    ],
+    "duration": 0.186341,
+    "related_events": [
+      "959006c9-f6c3-435c-9828-e19d7e7fc409",
+      "eb5c5481-be0f-4e47-bf5d-2d9a8a275da7"
+    ]
+  },
+  {
+    "id": "611bfe90-0981-4de4-90fc-5d08ab5aacf4",
+    "index": 3327,
+    "period": 2,
+    "timestamp": "00:46:12.433",
+    "minute": 91,
+    "second": 12,
+    "type": {
+      "id": 6,
+      "name": "Block"
+    },
+    "possession": 163,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 4,
+      "name": "From Throw In"
+    },
+    "out": true,
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      9.5,
+      70.5
+    ],
+    "duration": 0.0,
+    "related_events": [
+      "eb5c5481-be0f-4e47-bf5d-2d9a8a275da7"
+    ]
+  },
+  {
+    "id": "c92772f3-4e57-494d-bfb1-2a56080e3893",
+    "index": 3378,
+    "period": 2,
+    "timestamp": "00:48:47.316",
+    "minute": 93,
+    "second": 47,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 169,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      63.8,
+      76.1
+    ],
+    "duration": 0.194961,
+    "under_pressure": true,
+    "related_events": [
+      "aa882617-8630-4ecf-a23d-961a506551f4",
+      "60fd649c-4e7e-4000-9fd0-45a81b368563",
+      "32c2db1c-4e9c-4b93-944d-81183e807a8b",
+      "49d4db6e-896c-4497-916e-89f721c8f1fd"
+    ],
+    "carry": {
+      "end_location": [
+        69.4,
+        75.9
+      ]
+    }
+  },
+  {
+    "id": "32c2db1c-4e9c-4b93-944d-81183e807a8b",
+    "index": 3380,
+    "period": 2,
+    "timestamp": "00:48:47.511",
+    "minute": 93,
+    "second": 47,
+    "type": {
+      "id": 14,
+      "name": "Dribble"
+    },
+    "possession": 169,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      69.4,
+      75.9
+    ],
+    "duration": 0.0,
+    "under_pressure": true,
+    "related_events": [
+      "aa882617-8630-4ecf-a23d-961a506551f4"
+    ],
+    "dribble": {
+      "outcome": {
+        "id": 8,
+        "name": "Complete"
+      }
+    }
+  },
+  {
+    "id": "6603031a-e454-4dec-b596-749fbf0b2103",
+    "index": 3381,
+    "period": 2,
+    "timestamp": "00:48:47.511",
+    "minute": 93,
+    "second": 47,
+    "type": {
+      "id": 43,
+      "name": "Carry"
+    },
+    "possession": 169,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      69.4,
+      75.9
+    ],
+    "duration": 1.142366,
+    "under_pressure": true,
+    "related_events": [
+      "aa882617-8630-4ecf-a23d-961a506551f4",
+      "7feb3717-0ce5-41b2-81e9-664eb686b53a",
+      "32c2db1c-4e9c-4b93-944d-81183e807a8b"
+    ],
+    "carry": {
+      "end_location": [
+        74.7,
+        73.3
+      ]
+    }
+  },
+  {
+    "id": "7feb3717-0ce5-41b2-81e9-664eb686b53a",
+    "index": 3382,
+    "period": 2,
+    "timestamp": "00:48:48.654",
+    "minute": 93,
+    "second": 48,
+    "type": {
+      "id": 30,
+      "name": "Pass"
+    },
+    "possession": 169,
+    "possession_team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "play_pattern": {
+      "id": 1,
+      "name": "Regular Play"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "player": {
+      "id": 6301,
+      "name": "Youssef En-Nesyri"
+    },
+    "position": {
+      "id": 17,
+      "name": "Right Wing"
+    },
+    "location": [
+      74.7,
+      73.3
+    ],
+    "duration": 1.445593,
+    "related_events": [
+      "b1c8a1bf-62d3-4029-acb6-d808298149f0"
+    ],
+    "pass": {
+      "recipient": {
+        "id": 59493,
+        "name": "Abderrazak Hamdallah"
+      },
+      "length": 32.682716,
+      "angle": -1.1948354,
+      "height": {
+        "id": 1,
+        "name": "Ground Pass"
+      },
+      "end_location": [
+        86.7,
+        42.9
+      ],
+      "body_part": {
+        "id": 38,
+        "name": "Left Foot"
+      }
+    }
+  },
+  {
+    "id": "b0a964e0-0f57-4285-a579-243fffd96828",
+    "index": 3387,
+    "period": 2,
+    "timestamp": "00:48:54.501",
+    "minute": 93,
+    "second": 54,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 170,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 8,
+      "name": "From Keeper"
+    },
+    "team": {
+      "id": 788,
+      "name": "Morocco"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "1cd916ce-a829-43ca-9adc-5b217f44ba5f"
+    ]
+  },
+  {
+    "id": "1cd916ce-a829-43ca-9adc-5b217f44ba5f",
+    "index": 3388,
+    "period": 2,
+    "timestamp": "00:48:54.501",
+    "minute": 93,
+    "second": 54,
+    "type": {
+      "id": 34,
+      "name": "Half End"
+    },
+    "possession": 170,
+    "possession_team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "play_pattern": {
+      "id": 8,
+      "name": "From Keeper"
+    },
+    "team": {
+      "id": 1833,
+      "name": "Canada"
+    },
+    "duration": 0.0,
+    "related_events": [
+      "b0a964e0-0f57-4285-a579-243fffd96828"
+    ]
+  }
+]

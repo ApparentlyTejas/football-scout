@@ -52,6 +52,16 @@ def test_compute_percentiles_excludes_players_below_minute_threshold() -> None:
     assert results[3].shots_per_90_percentile == 50.0
 
 
+def test_compute_percentiles_excludes_players_with_no_position_group() -> None:
+    unknown_low = _aggregate(1, None, MIN_MINUTES_FOR_PERCENTILE, 1.0)
+    unknown_high = _aggregate(2, None, MIN_MINUTES_FOR_PERCENTILE, 3.0)
+
+    results = compute_percentiles([unknown_low, unknown_high])
+
+    assert results[1].shots_per_90_percentile is None
+    assert results[2].shots_per_90_percentile is None
+
+
 def test_compute_percentiles_handles_none_per_90_value() -> None:
     missing_value = _aggregate(1, "FW", MIN_MINUTES_FOR_PERCENTILE, None)
     qualifying = _aggregate(2, "FW", MIN_MINUTES_FOR_PERCENTILE, 2.0)

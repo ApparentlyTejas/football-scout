@@ -162,7 +162,7 @@ def test_aggregate_season_handles_zero_minutes_player(session: Session) -> None:
 
     assert len(results) == 1
     result = results[0]
-    assert result.matches_played == 1
+    assert result.matches_played == 0
     assert result.minutes_played == 0
     assert result.pass_completion_pct is None
     assert result.passes_per_90 is None
@@ -176,6 +176,69 @@ def test_aggregate_season_handles_zero_minutes_player(session: Session) -> None:
     assert result.aerial_duels_per_90 is None
     assert result.dispossessed_per_90 is None
     assert result.miscontrols_per_90 is None
+
+
+def test_aggregate_season_excludes_bench_matches_from_matches_played(session: Session) -> None:
+    season = _make_season(session)
+    team = Team(name="Morocco", country="Morocco")
+    opponent = Team(name="France", country="France")
+    session.add_all([team, opponent])
+    session.flush()
+
+    player = Player(name="Squad Player", primary_position="Right Back")
+    session.add(player)
+    session.flush()
+
+    played_match = _make_match(session, season.id, team.id, opponent.id, 1)
+    bench_match = _make_match(session, season.id, team.id, opponent.id, 2)
+
+    session.add_all(
+        [
+            PlayerMatchStat(
+                player_id=player.id,
+                match_id=played_match.id,
+                team_id=team.id,
+                minutes_played=90,
+                passes_attempted=10,
+                passes_completed=8,
+                shots=0,
+                carries=0,
+                pressures=0,
+                interceptions=0,
+                ball_recoveries=0,
+                dribbles=0,
+                duels=0,
+                aerial_duels=0,
+                dispossessed=0,
+                miscontrols=0,
+            ),
+            PlayerMatchStat(
+                player_id=player.id,
+                match_id=bench_match.id,
+                team_id=team.id,
+                minutes_played=0,
+                passes_attempted=0,
+                passes_completed=0,
+                shots=0,
+                carries=0,
+                pressures=0,
+                interceptions=0,
+                ball_recoveries=0,
+                dribbles=0,
+                duels=0,
+                aerial_duels=0,
+                dispossessed=0,
+                miscontrols=0,
+            ),
+        ]
+    )
+    session.commit()
+
+    results = aggregate_season(session, season.id)
+
+    assert len(results) == 1
+    assert results[0].matches_played == 1
+    assert results[0].minutes_played == 90
 
 
 def test_aggregate_season_maps_unknown_position_to_none_group(session: Session) -> None:

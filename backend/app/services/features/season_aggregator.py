@@ -103,7 +103,9 @@ def aggregate_season(session: Session, season_id: int) -> list[PlayerSeasonAggre
                 player_id=player_id,
                 team_id=latest_stat.team_id,
                 position_group=position_group,
-                matches_played=len(stat_match_pairs),
+                matches_played=sum(
+                    1 for stat, _match in stat_match_pairs if stat.minutes_played > 0
+                ),
                 minutes_played=minutes_played,
                 pass_completion_pct=(
                     totals["passes_completed"] / totals["passes_attempted"] * 100

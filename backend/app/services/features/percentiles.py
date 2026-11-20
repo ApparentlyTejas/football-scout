@@ -10,7 +10,18 @@ teammates with reliable minutes, using the formula
 cohort member ranks at the middle, 50.0, rather than dividing by zero).
 Minutes reliability (spec section 12) is enforced by excluding any player
 with fewer than MIN_MINUTES_FOR_PERCENTILE season minutes from both being
-ranked and from the cohort other players are ranked against.
+ranked and from the cohort other players are ranked against. A player
+with no recognized position group (position_group is None) is excluded
+the same way, so unrelated positions are never ranked against each other.
+
+Every field in PER_90_FIELDS is ranked ascending: a higher percentile
+always means a higher raw rate. For dispossessed_per_90 and
+miscontrols_per_90, a higher rate is worse, not better — a 95th
+percentile there means the player loses the ball more than 95% of their
+position-group peers, not that they are in the top 5%. Callers presenting
+these two fields must invert the reading themselves; this module does not
+flip them, to keep "percentile = rank of the raw rate" true for every
+field.
 """
 
 from dataclasses import dataclass, fields
@@ -69,7 +80,11 @@ def compute_percentiles(
 ) -> dict[int, PlayerSeasonPercentiles]:
     """Rank every aggregate's per-90 fields within its position-group
     cohort, restricted to players with reliable minutes."""
-    qualifying = [a for a in aggregates if a.minutes_played >= MIN_MINUTES_FOR_PERCENTILE]
+    qualifying = [
+        a
+        for a in aggregates
+        if a.minutes_played >= MIN_MINUTES_FOR_PERCENTILE and a.position_group is not None
+    ]
 
     results = {a.player_id: PlayerSeasonPercentiles(player_id=a.player_id) for a in aggregates}
 
